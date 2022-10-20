@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:d="http://schemas.microsoft.com/dotnet/2021/maui/design"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:viewModels="clr-namespace:MauiSamples.ViewModels"
+             mc:Ignorable="d"
+             x:Class="MauiSamples.MainPage">
+
+  <d:ContentPage.BindingContext>
+    <viewModels:MainViewModel />
+  </d:ContentPage.BindingContext>
+
+  <ContentPage.Resources>
+    <ResourceDictionary>
+      <Style TargetType="Label" x:Key="LabelStyle">
+        <Setter Property="Text" Value="{AppThemeBinding Light=Light, Dark=Dark}" />
+      </Style>
+    </ResourceDictionary>
+  </ContentPage.Resources>
+
+  <Grid>
+    <VerticalStackLayout
+      Spacing="25"
+      Padding="30,0"
+      VerticalOptions="Center">
+
+      <Label 
+        HorizontalOptions="Center"
+        Style="{DynamicResource LabelStyle}"
+        FontSize="Title"/>
+
+      <HorizontalStackLayout
+        VerticalOptions="Center"
+        HorizontalOptions="Center">
+        <Label
+          VerticalOptions="Center"
+          Text="Select Theme: " />
+        <Picker
+          VerticalOptions="Center"
+          ItemsSource="{Binding AvailableThemes}"
+          ItemDisplayBinding="{Binding Name}"
+          SelectedItem="{Binding AppTheme}"/>
+      </HorizontalStackLayout>
+
+    </VerticalStackLayout>
+  </Grid>
+
+</ContentPage>
