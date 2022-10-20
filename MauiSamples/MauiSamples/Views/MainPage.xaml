@@ -4,6 +4,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:viewModels="clr-namespace:MauiSamples.ViewModels"
+             xmlns:models="clr-namespace:MauiSamples.Models"
              mc:Ignorable="d"
              x:Class="MauiSamples.MainPage">
 
@@ -39,7 +40,7 @@
         <Picker
           VerticalOptions="Center"
           ItemsSource="{Binding AvailableThemes}"
-          ItemDisplayBinding="{Binding Name}"
+          ItemDisplayBinding="{Binding DisplayName}"
           SelectedItem="{Binding AppTheme}"/>
       </HorizontalStackLayout>
 
