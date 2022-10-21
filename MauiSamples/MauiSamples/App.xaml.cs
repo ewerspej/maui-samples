@@ -11,8 +11,10 @@ public partial class App : Application
 
         MainPage = new AppShell();
 
+        // let's set the initial theme already during the app start
         SetTheme();
 
+        // subscribe to changes in the settings
         SettingsService.Instance.PropertyChanged += OnSettingsPropertyChanged;
     }
 

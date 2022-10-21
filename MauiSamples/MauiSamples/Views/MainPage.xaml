@@ -20,7 +20,8 @@
     <VerticalStackLayout
       Spacing="25"
       Padding="30,0"
-      VerticalOptions="Center">
+      Margin="0,50,0,0"
+      VerticalOptions="Start">
 
       <Label 
         HorizontalOptions="Center"
@@ -33,6 +34,8 @@
         <Label
           VerticalOptions="Center"
           Text="Select Theme: " />
+
+        <!-- Note: We are binding to the SettingsService singleton and the DisplayName of the Theme -->
         <Picker
           VerticalOptions="Center"
           ItemsSource="{Binding Source={x:Static models:Theme.AvailableThemes}}"
