@@ -39,7 +39,7 @@
           Text="Select Theme: " />
         <Picker
           VerticalOptions="Center"
-          ItemsSource="{Binding AvailableThemes}"
+          ItemsSource="{Binding Source={x:Static models:Theme.AvailableThemes}}"
           ItemDisplayBinding="{Binding DisplayName}"
           SelectedItem="{Binding AppTheme}"/>
       </HorizontalStackLayout>

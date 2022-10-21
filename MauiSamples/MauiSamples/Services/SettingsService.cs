@@ -9,8 +9,11 @@ public partial class SettingsService
     private static SettingsService _instance;
     public static SettingsService Instance => _instance ??= new SettingsService();
 
-    private SettingsService() { }
+    private SettingsService()
+    {
+        Theme = Theme.System;
+    }
 
     [ObservableProperty]
-    private Theme _appTheme;
+    private Theme _theme;
 }

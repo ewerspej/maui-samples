@@ -1,5 +1,4 @@
-﻿using MauiSamples.Models;
-using MauiSamples.Services;
+﻿using MauiSamples.Services;
 using System.ComponentModel;
 
 namespace MauiSamples;
@@ -19,7 +18,7 @@ public partial class App : Application
 
     private void OnSettingsPropertyChanged(object sender, PropertyChangedEventArgs e)
     {
-        if (e.PropertyName == nameof(SettingsService.AppTheme))
+        if (e.PropertyName == nameof(SettingsService.Theme))
         {
             SetTheme();
         }
@@ -27,19 +26,8 @@ public partial class App : Application
 
     private void SetTheme()
     {
-        if (SettingsService.Instance.AppTheme == Theme.Light)
-        {
-            UserAppTheme = AppTheme.Light;
-        }
-
-        if (SettingsService.Instance.AppTheme == Theme.Dark)
-        {
-            UserAppTheme = AppTheme.Dark;
-        }
-
-        if (SettingsService.Instance.AppTheme == Theme.System)
-        {
-            UserAppTheme = AppTheme.Unspecified;
-        }
+        UserAppTheme = SettingsService.Instance?.Theme != null
+                     ? SettingsService.Instance.Theme.AppTheme
+                     : AppTheme.Unspecified;
     }
 }

@@ -9,16 +9,14 @@ public partial class MainViewModel
 {
     public MainViewModel()
     {
-        AppTheme = Theme.System;
+        AppTheme = SettingsService.Instance.Theme;
     }
-
-    public List<Theme> AvailableThemes { get; } = new() { Theme.System, Theme.Light, Theme.Dark };
 
     [ObservableProperty]
     private Theme _appTheme;
 
     partial void OnAppThemeChanged(Theme value)
     {
-        SettingsService.Instance.AppTheme = value;
+        SettingsService.Instance.Theme = value;
     }
 }
