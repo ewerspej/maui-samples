@@ -1,7 +1,7 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using MauiSamples.Models;
 
-namespace MauiSamples.Services;
+namespace MauiSamples.Services.Settings;
 
 [INotifyPropertyChanged]
 public partial class SettingsService

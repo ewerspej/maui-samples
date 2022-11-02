@@ -1,4 +1,5 @@
-﻿using MauiSamples.Services;
+﻿using MauiSamples.Services.Device.Platform;
+using MauiSamples.Services.Settings;
 using System.ComponentModel;
 
 namespace MauiSamples;
@@ -31,5 +32,21 @@ public partial class App : Application
         UserAppTheme = SettingsService.Instance?.Theme != null
                      ? SettingsService.Instance.Theme.AppTheme
                      : AppTheme.Unspecified;
+
+        switch (UserAppTheme)
+        {
+            case AppTheme.Light:
+                DeviceService.SetStatusBarColor(Colors.White, true);
+                break;
+            case AppTheme.Dark:
+                DeviceService.SetStatusBarColor(Colors.Black, false);
+                break;
+            case AppTheme.Unspecified when RequestedTheme == AppTheme.Light:
+                DeviceService.SetStatusBarColor(Colors.White, true);
+                break;
+            case AppTheme.Unspecified:
+                DeviceService.SetStatusBarColor(Colors.Black, false);
+                break;
+        }
     }
 }

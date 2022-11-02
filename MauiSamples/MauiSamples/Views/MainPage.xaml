@@ -4,7 +4,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:models="clr-namespace:MauiSamples.Models"
-             xmlns:services="clr-namespace:MauiSamples.Services"
+             xmlns:settings="clr-namespace:MauiSamples.Services.Settings"
              mc:Ignorable="d"
              x:Class="MauiSamples.MainPage">
 
@@ -40,7 +40,7 @@
           VerticalOptions="Center"
           ItemsSource="{Binding Source={x:Static models:Theme.AvailableThemes}}"
           ItemDisplayBinding="{Binding DisplayName}"
-          SelectedItem="{Binding Path=Theme, Source={x:Static services:SettingsService.Instance}}"/>
+          SelectedItem="{Binding Path=Theme, Source={x:Static settings:SettingsService.Instance}}"/>
       </HorizontalStackLayout>
 
     </VerticalStackLayout>
