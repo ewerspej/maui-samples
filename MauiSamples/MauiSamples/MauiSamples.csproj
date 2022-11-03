@@ -31,25 +31,25 @@
   </PropertyGroup>
 
   <!-- Android -->
-  <ItemGroup Condition="$(TargetFramework.StartsWith('net7.0-android')) != true">
+  <ItemGroup Condition="$(TargetFramework.StartsWith('net')) == true AND $(TargetFramework.Contains('-android')) != true">
     <Compile Remove="**\**\*.Android.cs" />
     <None Include="**\**\*.Android.cs" Exclude="$(DefaultItemExcludes);$(DefaultExcludesInProjectFolder)" />
   </ItemGroup>
 
   <!-- iOS -->
-  <ItemGroup Condition="$(TargetFramework.StartsWith('net7.0-ios')) != true">
+  <ItemGroup Condition="$(TargetFramework.StartsWith('net')) == true AND $(TargetFramework.Contains('-ios')) != true">
     <Compile Remove="**\**\*.iOS.cs" />
     <None Include="**\**\*.iOS.cs" Exclude="$(DefaultItemExcludes);$(DefaultExcludesInProjectFolder)" />
   </ItemGroup>
 
   <!-- Mac Catalyst -->
-  <ItemGroup Condition="$(TargetFramework.StartsWith('net7.0-maccatalyst')) != true">
+  <ItemGroup Condition="$(TargetFramework.StartsWith('net')) == true AND $(TargetFramework.Contains('-maccatalyst')) != true">
     <Compile Remove="**\**\*.MacCatalyst.cs" />
     <None Include="**\**\*.MacCatalyst.cs" Exclude="$(DefaultItemExcludes);$(DefaultExcludesInProjectFolder)" />
   </ItemGroup>
 
   <!-- Windows -->
-  <ItemGroup Condition="$(TargetFramework.StartsWith('net7.0-windows')) != true">
+  <ItemGroup Condition="$(TargetFramework.StartsWith('net')) == true AND $(TargetFramework.Contains('-windows')) != true">
     <Compile Remove="**\*.Windows.cs" />
     <None Include="**\*.Windows.cs" Exclude="$(DefaultItemExcludes);$(DefaultExcludesInProjectFolder)" />
   </ItemGroup>
