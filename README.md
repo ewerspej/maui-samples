@@ -7,7 +7,7 @@ Sample project for various C# .NET and .NET MAUI features
 - [x] MVVM Code Generation (simple scenarios)
 - [ ] MVVM Code Generation (advanced scenarios)
 - [x] Accessing platform-specific APIs using Conditional Compilation
-- [ ] Splash Screen (incl. platform differences)
+- [x] Splash Screen (incl. platform differences)
 - [ ] Status Bar Themes (Android)
 - [ ] App Preferences
 - [ ] Compiled Bindings
