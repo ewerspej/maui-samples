@@ -1,7 +1,7 @@
 # maui-samples
-Sample project for various C# .NET and .NET MAUI features 
+Sample project for various C# .NET and .NET MAUI features, many of which will are also covered in my blog: https://ewerspej.hashnode.dev/
 
-## Features currently explored ##
+## Features currently being explored ##
 
 - [x] App Themes (Dark/Light mode)
 - [x] MVVM Code Generation (simple scenarios)
@@ -17,4 +17,8 @@ Sample project for various C# .NET and .NET MAUI features
 - [ ] Media Playback (Audio, Video)
 - [ ] ...
 
-This list will be extended frequently.
+This list is not final and will be extended and updated frequently.
+
+## Sponsorship ##
+
+It would mean a lot to me, if you decide to sponsor my open source and blogging activities as it allows me to share my development journey with the community ❤️
