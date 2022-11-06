@@ -1,5 +1,5 @@
 # maui-samples
-Sample project for various C# .NET and .NET MAUI features, many of which will are also covered in my blog: https://ewerspej.hashnode.dev/
+Sample project for various C# .NET and .NET MAUI features, many of which will also be covered in my blog: https://ewerspej.hashnode.dev/
 
 ## Features currently being explored ##
 
