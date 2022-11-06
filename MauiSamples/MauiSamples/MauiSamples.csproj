@@ -46,8 +46,7 @@
   <ItemGroup Condition="$(TargetFramework.StartsWith('net')) == true AND $(TargetFramework.Contains('-android')) != true">
     <Compile Remove="**\**\*.Android.cs" />
     <None Include="**\**\*.Android.cs" Exclude="$(DefaultItemExcludes);$(DefaultExcludesInProjectFolder)" />
-    <Compile Remove="**\**\*.Android.xaml" />
-    <None Include="**\**\*.Android.xaml" Exclude="$(DefaultItemExcludes);$(DefaultExcludesInProjectFolder)" />
+    <MauiXaml Remove="**\**\*.Android.xaml" />
     <Compile Remove="**\**\*.Android.xaml.cs" />
     <None Include="**\**\*.Android.xaml.cs" Exclude="$(DefaultItemExcludes);$(DefaultExcludesInProjectFolder)" />
   </ItemGroup>
@@ -68,6 +67,9 @@
   <ItemGroup Condition="$(TargetFramework.StartsWith('net')) == true AND $(TargetFramework.Contains('-windows')) != true">
     <Compile Remove="**\*.Windows.cs" />
     <None Include="**\*.Windows.cs" Exclude="$(DefaultItemExcludes);$(DefaultExcludesInProjectFolder)" />
+    <MauiXaml Remove="**\**\*.Windows.xaml" />
+    <Compile Remove="**\**\*.Windows.xaml.cs" />
+    <None Include="**\**\*.Windows.xaml.cs" Exclude="$(DefaultItemExcludes);$(DefaultExcludesInProjectFolder)" />
   </ItemGroup>
 
   <!-- .NET -->
@@ -110,8 +112,14 @@
     <Folder Include="Models\" />
   </ItemGroup>
 
-  <ItemGroup>
-    <MauiXaml Update="Resources\Styles\SpecialStyles.android.xaml">
+  <ItemGroup Condition="$(TargetFramework.StartsWith('net')) == true AND $(TargetFramework.Contains('-android')) == true">
+    <MauiXaml Update="Resources\Styles\SpecialStyles.windows.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </MauiXaml>
+  </ItemGroup>
+
+  <ItemGroup Condition="$(TargetFramework.StartsWith('net')) == true AND $(TargetFramework.Contains('-windows')) == true">
+    <MauiXaml Update="Resources\Styles\SpecialStyles.windows.xaml">
       <Generator>MSBuild:Compile</Generator>
     </MauiXaml>
   </ItemGroup>

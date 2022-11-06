@@ -51,7 +51,7 @@ public partial class App : Application
 
         try
         {
-#if ANDROID
+#if ANDROID || WINDOWS
             ICollection<ResourceDictionary> mergedDictionaries = Current.Resources.MergedDictionaries;
             if (mergedDictionaries != null)
             {
