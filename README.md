@@ -19,6 +19,10 @@ Sample project for various C# .NET and .NET MAUI features, many of which will ar
 
 This list is not final and will be extended and updated frequently.
 
+## Requests ##
+
+I'm happy to cover any interesting and challenging topic. Just let me know about your ideas and wishes and might pick it up in my blog and in this repository.
+
 ## Sponsorship ##
 
 It would mean a lot to me, if you decide to sponsor my open source and blogging activities as it allows me to share my development journey with the community ❤️
