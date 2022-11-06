@@ -48,5 +48,21 @@ public partial class App : Application
                 DeviceService.SetStatusBarColor(Colors.Black, false);
                 break;
         }
+
+        try
+        {
+#if ANDROID
+            ICollection<ResourceDictionary> mergedDictionaries = Current.Resources.MergedDictionaries;
+            if (mergedDictionaries != null)
+            {
+                mergedDictionaries.Clear();
+                mergedDictionaries.Add(new MauiSamples.Resources.Styles.SpecialStyles());
+            }
+#endif
+        }
+        catch
+        {
+            //ignore
+        }
     }
 }

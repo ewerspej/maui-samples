@@ -46,6 +46,10 @@
   <ItemGroup Condition="$(TargetFramework.StartsWith('net')) == true AND $(TargetFramework.Contains('-android')) != true">
     <Compile Remove="**\**\*.Android.cs" />
     <None Include="**\**\*.Android.cs" Exclude="$(DefaultItemExcludes);$(DefaultExcludesInProjectFolder)" />
+    <Compile Remove="**\**\*.Android.xaml" />
+    <None Include="**\**\*.Android.xaml" Exclude="$(DefaultItemExcludes);$(DefaultExcludesInProjectFolder)" />
+    <Compile Remove="**\**\*.Android.xaml.cs" />
+    <None Include="**\**\*.Android.xaml.cs" Exclude="$(DefaultItemExcludes);$(DefaultExcludesInProjectFolder)" />
   </ItemGroup>
 
   <!-- iOS -->
@@ -104,6 +108,12 @@
 
   <ItemGroup>
     <Folder Include="Models\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <MauiXaml Update="Resources\Styles\SpecialStyles.android.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </MauiXaml>
   </ItemGroup>
 
 </Project>
