@@ -19,7 +19,7 @@ Sample project for various C# .NET and .NET MAUI features, many of which will ar
 
 This list is not final and will be extended and updated frequently.
 
-## Requests ##
+## Your Requests ##
 
 I'm happy to cover any interesting and challenging topic. Just let me know about your ideas and wishes and might pick it up in my blog and in this repository.
 
