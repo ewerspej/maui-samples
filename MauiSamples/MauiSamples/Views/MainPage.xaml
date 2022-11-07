@@ -43,7 +43,7 @@
           SelectedItem="{Binding Path=Theme, Source={x:Static settings:SettingsService.Instance}}"/>
       </HorizontalStackLayout>
 
-      <Button Text="Hello" />
+      <Button Text="Say Hello" Pressed="Button_OnPressed" />
 
     </VerticalStackLayout>
   </Grid>
