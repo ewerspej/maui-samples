@@ -6,8 +6,10 @@ Sample project for various C# .NET and .NET MAUI features, many of which will al
 - [x] App Themes (Dark/Light mode)
 - [x] MVVM Code Generation (simple scenarios)
 - [ ] MVVM Code Generation (advanced scenarios)
-- [x] Accessing platform-specific APIs using Conditional Compilation
+- [x] Built-in Multi-Targeting
+- [x] Advanced Multi-Targeting
 - [x] Splash Screen (incl. platform differences)
+- [ ] Platform specific APIs
 - [ ] Status Bar Themes (Android)
 - [ ] App Preferences
 - [ ] Compiled Bindings
