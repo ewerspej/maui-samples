@@ -1,4 +1,4 @@
-namespace MauiSamples.Resources.Styles;
+namespace MauiSamples.Resources.Styles.Platform;
 
 public partial class SpecialStyles : ResourceDictionary
 {
