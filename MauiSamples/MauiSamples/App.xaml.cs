@@ -49,20 +49,21 @@ public partial class App : Application
                 break;
         }
 
+#if ANDROID || WINDOWS
         try
         {
-#if ANDROID || WINDOWS
-            ICollection<ResourceDictionary> mergedDictionaries = Current.Resources.MergedDictionaries;
-            if (mergedDictionaries != null)
+            if (Current?.Resources.MergedDictionaries is not { } mergedDictionaries)
             {
-                mergedDictionaries.Clear();
-                mergedDictionaries.Add(new MauiSamples.Resources.Styles.SpecialStyles());
+                return;
             }
-#endif
+
+            mergedDictionaries.Clear();
+            mergedDictionaries.Add(new Resources.Styles.Platform.SpecialStyles());
         }
         catch
         {
             //ignore
         }
+#endif
     }
 }
