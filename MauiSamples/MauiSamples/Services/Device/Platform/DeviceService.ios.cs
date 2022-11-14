@@ -1,8 +1,15 @@
-﻿namespace MauiSamples.Services.Device.Platform;
+﻿using UIKit;
 
-static partial class DeviceService
+namespace MauiSamples.Services.Device.Platform;
+
+partial class DeviceService
 {
-    public static partial void SetStatusBarColor(Color color, bool isLight)
+    public partial void SetScreenBrightness(float brightness)
+    {
+        UIScreen.MainScreen.Brightness = brightness;
+    }
+
+    public partial void SetStatusBarColor(Color color, bool isLight)
     {
         //ignore
     }

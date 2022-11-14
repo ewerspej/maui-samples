@@ -1,8 +1,13 @@
 ﻿namespace MauiSamples.Services.Device.Platform;
 
-static partial class DeviceService
+partial class DeviceService
 {
-    public static partial void SetStatusBarColor(Color color, bool isLight)
+    public partial void SetScreenBrightness(float brightness)
+    {
+        //ignore
+    }
+
+    public partial void SetStatusBarColor(Color color, bool isLight)
     {
         //ignore
     }

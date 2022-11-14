@@ -4,7 +4,7 @@
              x:Class="MauiSamples.Resources.Styles.Platform.SpecialStyles">
 
   <Style ApplyToDerivedTypes="True" TargetType="Button">
-    <Setter Property="BackgroundColor" Value="Red" />
+    <Setter Property="BackgroundColor" Value="Orange" />
   </Style>
 
 </ResourceDictionary>

@@ -36,34 +36,34 @@ public partial class App : Application
         switch (UserAppTheme)
         {
             case AppTheme.Light:
-                DeviceService.SetStatusBarColor(Colors.White, true);
+                DeviceService.Instance.SetStatusBarColor(Colors.White, true);
                 break;
             case AppTheme.Dark:
-                DeviceService.SetStatusBarColor(Colors.Black, false);
+                DeviceService.Instance.SetStatusBarColor(Colors.Black, false);
                 break;
             case AppTheme.Unspecified when RequestedTheme == AppTheme.Light:
-                DeviceService.SetStatusBarColor(Colors.White, true);
+                DeviceService.Instance.SetStatusBarColor(Colors.White, true);
                 break;
             case AppTheme.Unspecified:
-                DeviceService.SetStatusBarColor(Colors.Black, false);
+                DeviceService.Instance.SetStatusBarColor(Colors.Black, false);
                 break;
         }
 
-#if ANDROID || WINDOWS
-        try
-        {
-            if (Current?.Resources.MergedDictionaries is not { } mergedDictionaries)
-            {
-                return;
-            }
+//#if ANDROID || WINDOWS
+//        try
+//        {
+//            if (Current?.Resources.MergedDictionaries is not { } mergedDictionaries)
+//            {
+//                return;
+//            }
 
-            mergedDictionaries.Clear();
-            mergedDictionaries.Add(new Resources.Styles.Platform.SpecialStyles());
-        }
-        catch
-        {
-            //ignore
-        }
-#endif
+//            mergedDictionaries.Clear();
+//            mergedDictionaries.Add(new Resources.Styles.Platform.SpecialStyles());
+//        }
+//        catch
+//        {
+//            //ignore
+//        }
+//#endif
     }
 }

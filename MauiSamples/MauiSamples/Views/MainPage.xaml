@@ -45,6 +45,21 @@
 
       <Button Text="Say Hello" Pressed="Button_OnPressed" />
 
+      <HorizontalStackLayout
+        Spacing="30"
+        HorizontalOptions="Center">
+        <Button
+          Text="Dim Display"
+          HorizontalOptions="Start"
+          WidthRequest="100"
+          Command="{Binding SetLowBrightnessCommand}"/>
+        <Button
+          Text="Undim Display"
+          HorizontalOptions="End"
+          WidthRequest="100"
+          Command="{Binding SetHighBrightnessCommand}"/>
+      </HorizontalStackLayout>
+
     </VerticalStackLayout>
   </Grid>
 

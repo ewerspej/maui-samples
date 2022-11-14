@@ -16,6 +16,10 @@
     <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray500}, Dark={StaticResource White}}" />
   </Style>
 
+  <Style ApplyToDerivedTypes="True" TargetType="Button">
+    <Setter Property="BackgroundColor" Value="Orange" />
+  </Style>
+
   <Style TargetType="Shell" ApplyToDerivedTypes="True">
     <Setter Property="Shell.BackgroundColor" Value="{AppThemeBinding Light={StaticResource Primary}, Dark={StaticResource Gray950}}" />
     <Setter Property="Shell.ForegroundColor" Value="{OnPlatform WinUI={StaticResource Primary}, Default={StaticResource White}}" />
