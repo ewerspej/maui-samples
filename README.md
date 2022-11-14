@@ -4,17 +4,17 @@ Sample project for various C# .NET and .NET MAUI features, many of which will al
 ## Features currently being explored ##
 
 - [x] App Themes (Dark/Light mode)
-- [x] MVVM Code Generation (simple scenarios)
-- [ ] MVVM Code Generation (advanced scenarios)
+- [x] Splash Screen (incl. platform differences)
 - [x] Built-in Multi-Targeting
 - [x] Advanced Multi-Targeting
-- [x] Splash Screen (incl. platform differences)
-- [ ] Platform specific APIs
+- [x] Platform specific APIs
+- [ ] Unit Tests
+- [ ] Dependency Injection using Shell
+- [ ] MVVM Code Generation (simple scenarios)
+- [ ] MVVM Code Generation (advanced scenarios)
 - [ ] Status Bar Themes (Android)
 - [ ] App Preferences
 - [ ] Compiled Bindings
-- [ ] Dependency Injection using Shell
-- [ ] Unit Tests
 - [ ] Background Services
 - [ ] Media Playback (Audio, Video)
 - [ ] ...
