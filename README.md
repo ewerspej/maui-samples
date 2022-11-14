@@ -10,7 +10,7 @@ Sample project for various C# .NET and .NET MAUI features, many of which will al
 - [x] Platform specific APIs
 - [ ] Unit Tests
 - [ ] Dependency Injection using Shell
-- [ ] MVVM Code Generation (simple scenarios)
+- [x] MVVM Code Generation (simple scenarios)
 - [ ] MVVM Code Generation (advanced scenarios)
 - [ ] Status Bar Themes (Android)
 - [ ] App Preferences
