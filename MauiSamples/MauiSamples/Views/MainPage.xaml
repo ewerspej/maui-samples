@@ -6,7 +6,7 @@
              xmlns:models="clr-namespace:MauiSamples.Models"
              xmlns:settings="clr-namespace:MauiSamples.Services.Settings"
              mc:Ignorable="d"
-             x:Class="MauiSamples.MainPage">
+             x:Class="MauiSamples.Views.MainPage">
 
   <ContentPage.Resources>
     <ResourceDictionary>

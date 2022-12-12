@@ -3,12 +3,23 @@
     x:Class="MauiSamples.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:MauiSamples"
+    xmlns:views="clr-namespace:MauiSamples.Views"
     Shell.FlyoutBehavior="Disabled">
 
-    <ShellContent
+  <TabBar>
+    <Tab Title="Home">
+      <ShellContent
         Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
+        ContentTemplate="{DataTemplate views:MainPage}"
         Route="MainPage" />
+    </Tab>
+    <Tab Title="Address">
+      <ShellContent
+        Title="MVVM Goodness"
+        ContentTemplate="{DataTemplate views:MvvmSamplePage}"
+        Route="MvvmSample"/>
+    </Tab>
+  </TabBar>
+
 
 </Shell>

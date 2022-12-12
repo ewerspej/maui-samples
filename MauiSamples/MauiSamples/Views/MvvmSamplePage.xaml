@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiSamples.Views.MvvmSamplePage">
+
+  <Grid>
+    <VerticalStackLayout
+      VerticalOptions="Fill"
+      Padding="20"
+      Spacing="40">
+
+      <Grid
+        RowDefinitions="auto,auto,auto,auto,auto"
+        ColumnDefinitions="*,*">
+
+        <Label Text="First Name:" VerticalTextAlignment="Center" Grid.Row="0" Grid.Column="0" />
+        <Entry Text="{Binding FirstName}" Grid.Row="0" Grid.Column="1" />
+
+        <Label Text="Last Name:" VerticalTextAlignment="Center" Grid.Row="1" Grid.Column="0" />
+        <Entry Text="{Binding LastName}" Grid.Row="1" Grid.Column="1" />
+
+        <Label Text="Street/No.:" VerticalTextAlignment="Center" Grid.Row="2" Grid.Column="0" />
+        <Entry Text="{Binding StreetAddress}" Grid.Row="2" Grid.Column="1" />
+
+        <Label Text="Post Code:" VerticalTextAlignment="Center" Grid.Row="3" Grid.Column="0" />
+        <Entry Text="{Binding PostCode}" Grid.Row="3" Grid.Column="1" />
+
+        <Label Text="City:" VerticalTextAlignment="Center" Grid.Row="4" Grid.Column="0" />
+        <Entry Text="{Binding City}" Grid.Row="4" Grid.Column="1" />
+
+      </Grid>
+
+      <Label Text="{Binding Address}" MaxLines="5" VerticalOptions="End" />
+
+    </VerticalStackLayout>
+  </Grid>
+  
+</ContentPage>

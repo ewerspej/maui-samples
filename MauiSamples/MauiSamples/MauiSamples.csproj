@@ -124,13 +124,18 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="CommunityToolkit.Mvvm" Version="8.0.0" />
+    <PackageReference Include="CommunityToolkit.Mvvm" Version="8.1.0-preview1" />
     <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="6.0.0" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="Models\" />
-    <Folder Include="ViewModels\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Views\MvvmSamplePage.xaml.cs">
+      <DependentUpon>MvvmSamplePage.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
 
 </Project>

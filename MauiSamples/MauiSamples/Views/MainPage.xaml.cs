@@ -1,7 +1,7 @@
 ﻿using MauiSamples.Services.Device.Platform;
 using MauiSamples.ViewModels;
 
-namespace MauiSamples;
+namespace MauiSamples.Views;
 
 public partial class MainPage : ContentPage
 {
