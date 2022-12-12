@@ -17,50 +17,53 @@
   </ContentPage.Resources>
 
   <Grid>
-    <VerticalStackLayout
-      Spacing="25"
-      Padding="30,0"
-      Margin="0,50,0,0"
-      VerticalOptions="Start">
+    <ScrollView>
+      <VerticalStackLayout
+        Spacing="25"
+        Padding="30,0"
+        Margin="0,50,0,0"
+        VerticalOptions="Start">
 
-      <Label 
-        HorizontalOptions="Center"
-        Style="{DynamicResource LabelStyle}"
-        FontSize="Title"/>
+        <Label 
+          HorizontalOptions="Center"
+          Style="{DynamicResource LabelStyle}"
+          FontSize="Title"/>
 
-      <HorizontalStackLayout
-        VerticalOptions="Center"
-        HorizontalOptions="Center">
-        <Label
+        <HorizontalStackLayout
           VerticalOptions="Center"
-          Text="Select Theme: " />
+          HorizontalOptions="Center">
+          <Label
+            VerticalOptions="Center"
+            Text="Select Theme: " />
 
-        <!-- Note: We are binding to the SettingsService singleton and the DisplayName of the Theme -->
-        <Picker
-          VerticalOptions="Center"
-          ItemsSource="{Binding Source={x:Static models:Theme.AvailableThemes}}"
-          ItemDisplayBinding="{Binding DisplayName}"
-          SelectedItem="{Binding Path=Theme, Source={x:Static settings:SettingsService.Instance}}"/>
-      </HorizontalStackLayout>
+          <!-- Note: We are binding to the SettingsService singleton and the DisplayName of the Theme -->
+          <Picker
+            VerticalOptions="Center"
+            ItemsSource="{Binding Source={x:Static models:Theme.AvailableThemes}}"
+            ItemDisplayBinding="{Binding DisplayName}"
+            SelectedItem="{Binding Path=Theme, Source={x:Static settings:SettingsService.Instance}}"/>
+        </HorizontalStackLayout>
 
-      <Button Text="Say Hello" Pressed="Button_OnPressed" />
+        <Button Text="Say Hello" Pressed="Button_OnPressed" />
 
-      <HorizontalStackLayout
-        Spacing="30"
-        HorizontalOptions="Center">
-        <Button
-          Text="Dim Display"
-          HorizontalOptions="Start"
-          WidthRequest="100"
-          Command="{Binding SetLowBrightnessCommand}"/>
-        <Button
-          Text="Undim Display"
-          HorizontalOptions="End"
-          WidthRequest="100"
-          Command="{Binding SetHighBrightnessCommand}"/>
-      </HorizontalStackLayout>
+        <HorizontalStackLayout
+          Spacing="30"
+          HorizontalOptions="Center">
+          <Button
+            Text="Dim Display"
+            HorizontalOptions="Start"
+            WidthRequest="100"
+            Command="{Binding SetLowBrightnessCommand}"/>
+          <Button
+            Text="Undim Display"
+            HorizontalOptions="End"
+            WidthRequest="100"
+            Command="{Binding SetHighBrightnessCommand}"/>
+        </HorizontalStackLayout>
 
-    </VerticalStackLayout>
+      </VerticalStackLayout>
+    </ScrollView>
   </Grid>
 
 </ContentPage>
+  
