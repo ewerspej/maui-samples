@@ -1,11 +1,28 @@
 ﻿using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Text;
+using System.Windows.Input;
 
 namespace MauiSamples.ViewModels;
 
 public sealed class MvvmSampleViewModel : INotifyPropertyChanged
 {
+    #region Delegates
+
+    public delegate void DisplayAddressDelegate(string address);
+    public DisplayAddressDelegate DisplayAddress = null;
+
+    #endregion
+
+    #region Commands
+
+    private ICommand _showAddressCommand;
+    public ICommand ShowAddressCommand => _showAddressCommand ??= new Command(ShowAddress);
+
+    #endregion
+
+    #region Properties
+
     private string _firstName;
     public string FirstName
     {
@@ -36,7 +53,8 @@ public sealed class MvvmSampleViewModel : INotifyPropertyChanged
     public string StreetAddress
     {
         get => _streetAddress;
-        set {
+        set
+        {
             if (SetField(ref _streetAddress, value))
             {
                 OnPropertyChanged(nameof(Address));
@@ -48,7 +66,8 @@ public sealed class MvvmSampleViewModel : INotifyPropertyChanged
     public string PostCode
     {
         get => _postCode;
-        set {
+        set
+        {
             if (SetField(ref _postCode, value))
             {
                 OnPropertyChanged(nameof(Address));
@@ -60,7 +79,8 @@ public sealed class MvvmSampleViewModel : INotifyPropertyChanged
     public string City
     {
         get => _city;
-        set {
+        set
+        {
             if (SetField(ref _city, value))
             {
                 OnPropertyChanged(nameof(Address));
@@ -78,10 +98,21 @@ public sealed class MvvmSampleViewModel : INotifyPropertyChanged
                 .AppendLine($"{FirstName} {LastName}")
                 .AppendLine(StreetAddress)
                 .AppendLine($"{PostCode} {City}");
-                
+
             return stringBuilder.ToString();
         }
     }
+
+    #endregion
+
+    #region Private Methods
+
+    private void ShowAddress()
+    {
+        DisplayAddress?.Invoke(Address);
+    }
+
+    #endregion
 
     #region INotifyPropertyChanged implementation
 

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<mopups:PopupPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                  xmlns:mopups="clr-namespace:Mopups.Pages;assembly=Mopups"
+                  xmlns:popups="clr-namespace:MauiSamples.Views.Popups"
+                  x:Class="MauiSamples.Views.Popups.AddressPopup"
+                  x:DataType="popups:AddressPopup"
+                  mopups:CloseWhenBackgroundIsClicked="True"
+                  Title="AddressPopup"
+                  BackgroundColor="#80000000">
+
+  <Grid
+    WidthRequest="300"
+    HeightRequest="100"
+    VerticalOptions="Center"
+    HorizontalOptions="Center"
+    BackgroundColor="Orange"
+    Padding="10">
+
+    <Label
+      Text="{Binding Address}"
+      MaxLines="5" 
+      HorizontalOptions="Start"
+      HorizontalTextAlignment="Start"
+      TextColor="White"/>
+    
+  </Grid>
+
+</mopups:PopupPage>

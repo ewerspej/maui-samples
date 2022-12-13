@@ -1,4 +1,5 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
 using System.Text;
 
 namespace MauiSamples.ViewModels;
@@ -6,6 +7,9 @@ namespace MauiSamples.ViewModels;
 [ObservableObject]
 public partial class MvvmSampleGenViewModel
 {
+    public delegate void DisplayAddressDelegate(string address);
+    public DisplayAddressDelegate DisplayAddress = null;
+
     [ObservableProperty]
     [NotifyPropertyChangedFor(nameof(Address))]
     private string _firstName;
@@ -39,5 +43,11 @@ public partial class MvvmSampleGenViewModel
 
             return stringBuilder.ToString();
         }
+    }
+
+    [RelayCommand]
+    private void ShowAddress()
+    {
+        DisplayAddress?.Invoke(Address);
     }
 }
