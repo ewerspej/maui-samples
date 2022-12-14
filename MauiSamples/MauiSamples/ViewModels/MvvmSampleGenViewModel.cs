@@ -11,26 +11,26 @@ public partial class MvvmSampleGenViewModel
     public PrintAddressDelegate OnPrintAddress = null;
 
     [ObservableProperty]
-    [NotifyPropertyChangedFor(nameof(Address))]
+    [NotifyPropertyChangedFor(nameof(FullAddress))]
     private string _firstName;
 
     [ObservableProperty]
-    [NotifyPropertyChangedFor(nameof(Address))]
+    [NotifyPropertyChangedFor(nameof(FullAddress))]
     private string _lastName;
 
     [ObservableProperty]
-    [NotifyPropertyChangedFor(nameof(Address))]
+    [NotifyPropertyChangedFor(nameof(FullAddress))]
     private string _streetAddress;
 
     [ObservableProperty]
-    [NotifyPropertyChangedFor(nameof(Address))]
+    [NotifyPropertyChangedFor(nameof(FullAddress))]
     private string _postCode;
 
     [ObservableProperty]
-    [NotifyPropertyChangedFor(nameof(Address))]
+    [NotifyPropertyChangedFor(nameof(FullAddress))]
     private string _city;
 
-    public string Address
+    public string FullAddress
     {
         get
         {
@@ -48,6 +48,6 @@ public partial class MvvmSampleGenViewModel
     [RelayCommand]
     private void ShowAddress()
     {
-        OnPrintAddress?.Invoke(Address);
+        OnPrintAddress?.Invoke(FullAddress);
     }
 }

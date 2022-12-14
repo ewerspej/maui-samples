@@ -31,7 +31,7 @@ public sealed class MvvmSampleViewModel : INotifyPropertyChanged
         {
             if (SetField(ref _firstName, value))
             {
-                OnPropertyChanged(nameof(Address));
+                OnPropertyChanged(nameof(FullAddress));
             }
         }
     }
@@ -44,7 +44,7 @@ public sealed class MvvmSampleViewModel : INotifyPropertyChanged
         {
             if (SetField(ref _lastName, value))
             {
-                OnPropertyChanged(nameof(Address));
+                OnPropertyChanged(nameof(FullAddress));
             }
         }
     }
@@ -57,7 +57,7 @@ public sealed class MvvmSampleViewModel : INotifyPropertyChanged
         {
             if (SetField(ref _streetAddress, value))
             {
-                OnPropertyChanged(nameof(Address));
+                OnPropertyChanged(nameof(FullAddress));
             }
         }
     }
@@ -70,7 +70,7 @@ public sealed class MvvmSampleViewModel : INotifyPropertyChanged
         {
             if (SetField(ref _postCode, value))
             {
-                OnPropertyChanged(nameof(Address));
+                OnPropertyChanged(nameof(FullAddress));
             }
         }
     }
@@ -83,12 +83,12 @@ public sealed class MvvmSampleViewModel : INotifyPropertyChanged
         {
             if (SetField(ref _city, value))
             {
-                OnPropertyChanged(nameof(Address));
+                OnPropertyChanged(nameof(FullAddress));
             }
         }
     }
 
-    public string Address
+    public string FullAddress
     {
         get
         {
@@ -109,7 +109,7 @@ public sealed class MvvmSampleViewModel : INotifyPropertyChanged
 
     private void PrintAddress()
     {
-        OnPrintAddress?.Invoke(Address);
+        OnPrintAddress?.Invoke(FullAddress);
     }
 
     #endregion

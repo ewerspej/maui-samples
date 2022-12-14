@@ -13,7 +13,7 @@
         ContentTemplate="{DataTemplate views:MainPage}"
         Route="MainPage" />
     </Tab>
-    <Tab Title="Address">
+    <Tab Title="FullAddress">
       <ShellContent
         Title="MVVM Goodness"
         ContentTemplate="{DataTemplate views:MvvmSamplePage}"
