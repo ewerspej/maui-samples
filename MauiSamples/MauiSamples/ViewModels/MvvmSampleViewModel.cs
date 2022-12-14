@@ -9,15 +9,15 @@ public sealed class MvvmSampleViewModel : INotifyPropertyChanged
 {
     #region Delegates
 
-    public delegate void DisplayAddressDelegate(string address);
-    public DisplayAddressDelegate DisplayAddress = null;
+    public delegate void PrintAddressDelegate(string address);
+    public PrintAddressDelegate OnPrintAddress = null;
 
     #endregion
 
     #region Commands
 
     private ICommand _showAddressCommand;
-    public ICommand ShowAddressCommand => _showAddressCommand ??= new Command(ShowAddress);
+    public ICommand ShowAddressCommand => _showAddressCommand ??= new Command(PrintAddress);
 
     #endregion
 
@@ -107,9 +107,9 @@ public sealed class MvvmSampleViewModel : INotifyPropertyChanged
 
     #region Private Methods
 
-    private void ShowAddress()
+    private void PrintAddress()
     {
-        DisplayAddress?.Invoke(Address);
+        OnPrintAddress?.Invoke(Address);
     }
 
     #endregion

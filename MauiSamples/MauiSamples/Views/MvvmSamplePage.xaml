@@ -32,7 +32,7 @@
 
       <Label Text="{Binding Address}" MaxLines="5" VerticalOptions="End" />
 
-      <Button Text="Print Address" Command="{Binding ShowAddressCommand}" />
+      <Button Text="Print Address" Command="{Binding PrintAddressCommand}" />
 
     </VerticalStackLayout>
   </Grid>

@@ -10,9 +10,10 @@ public partial class MvvmSamplePage : ContentPage
     {
         InitializeComponent();
 
-        var vm = new MvvmSampleViewModel
+        var vm = new MvvmSampleGenViewModel
+        //var vm = new MvvmSampleViewModel
         {
-            DisplayAddress = DisplayAddressAsync
+            OnPrintAddress = DisplayAddressAsync
         };
 
         BindingContext = vm;

@@ -7,8 +7,8 @@ namespace MauiSamples.ViewModels;
 [ObservableObject]
 public partial class MvvmSampleGenViewModel
 {
-    public delegate void DisplayAddressDelegate(string address);
-    public DisplayAddressDelegate DisplayAddress = null;
+    public delegate void PrintAddressDelegate(string address);
+    public PrintAddressDelegate OnPrintAddress = null;
 
     [ObservableProperty]
     [NotifyPropertyChangedFor(nameof(Address))]
@@ -48,6 +48,6 @@ public partial class MvvmSampleGenViewModel
     [RelayCommand]
     private void ShowAddress()
     {
-        DisplayAddress?.Invoke(Address);
+        OnPrintAddress?.Invoke(Address);
     }
 }
