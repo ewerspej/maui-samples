@@ -46,7 +46,7 @@ public partial class AddressViewModelSourceGen
     }
 
     [RelayCommand]
-    private void ShowAddress()
+    private void PrintAddress()
     {
         OnPrintAddress?.Invoke(FullAddress);
     }
