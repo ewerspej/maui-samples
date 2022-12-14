@@ -4,14 +4,14 @@ using Mopups.Services;
 
 namespace MauiSamples.Views;
 
-public partial class MvvmSamplePage : ContentPage
+public partial class AddressPage
 {
-    public MvvmSamplePage()
+    public AddressPage()
     {
         InitializeComponent();
 
-        var vm = new MvvmSampleGenViewModel
-        //var vm = new MvvmSampleViewModel
+        var vm = new AddressViewModelSourceGen
+        //var vm = new AddressViewModel
         {
             OnPrintAddress = DisplayAddressAsync
         };

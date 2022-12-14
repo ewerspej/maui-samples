@@ -5,7 +5,7 @@ using System.Windows.Input;
 
 namespace MauiSamples.ViewModels;
 
-public sealed class MvvmSampleViewModel : INotifyPropertyChanged
+public sealed class AddressViewModel : INotifyPropertyChanged
 {
     #region Delegates
 

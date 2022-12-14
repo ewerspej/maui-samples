@@ -16,7 +16,7 @@
     <Tab Title="FullAddress">
       <ShellContent
         Title="MVVM Goodness"
-        ContentTemplate="{DataTemplate views:MvvmSamplePage}"
+        ContentTemplate="{DataTemplate views:AddressPage}"
         Route="MvvmSample"/>
     </Tab>
   </TabBar>

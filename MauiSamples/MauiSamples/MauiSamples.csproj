@@ -134,8 +134,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="Views\MvvmSamplePage.xaml.cs">
-      <DependentUpon>MvvmSamplePage.xaml</DependentUpon>
+    <Compile Update="Views\AddressPage.xaml.cs">
+      <DependentUpon>AddressPage.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
 
