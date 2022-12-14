@@ -4,8 +4,7 @@ using System.Text;
 
 namespace MauiSamples.ViewModels;
 
-[ObservableObject]
-public partial class AddressViewModelSourceGen
+public partial class AddressViewModelSourceGen : ObservableObject
 {
     public delegate void PrintAddressDelegate(string address);
     public PrintAddressDelegate OnPrintAddress = null;
