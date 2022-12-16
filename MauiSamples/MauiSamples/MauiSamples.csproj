@@ -140,6 +140,24 @@
   </ItemGroup>
 
   <ItemGroup>
+    <MauiXaml Update="Views\Platform\HelloFromAndroid.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </MauiXaml>
+    <MauiXaml Update="Views\Platform\HelloFromiOS.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </MauiXaml>
+    <MauiXaml Update="Views\Platform\HelloFromOther.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </MauiXaml>
+    <MauiXaml Update="Views\Platform\PageWithPlatformSpecificView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </MauiXaml>
+    <MauiXaml Update="Views\Platform\ViewAndroid.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </MauiXaml>
+    <MauiXaml Update="Views\Platform\ViewiOS.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </MauiXaml>
     <MauiXaml Update="Views\Popups\AddressPopup.xaml">
       <Generator>MSBuild:Compile</Generator>
     </MauiXaml>

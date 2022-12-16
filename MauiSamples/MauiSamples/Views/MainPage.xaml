@@ -44,7 +44,11 @@
             SelectedItem="{Binding Path=Theme, Source={x:Static settings:SettingsService.Instance}}"/>
         </HorizontalStackLayout>
 
-        <Button Text="Say Hello" Pressed="Button_OnPressed" />
+        <Button Text="Say Hello" Pressed="SayHello" />
+
+        <Button Text="Hello from Platform" Pressed="OpenHelloView" />
+
+        <Button Text="Hello with Platform View" Pressed="OpenWithPlatformView" />
 
         <HorizontalStackLayout
           Spacing="30"
