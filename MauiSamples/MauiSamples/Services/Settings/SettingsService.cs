@@ -3,8 +3,7 @@ using MauiSamples.Models;
 
 namespace MauiSamples.Services.Settings;
 
-[INotifyPropertyChanged]
-public partial class SettingsService
+public partial class SettingsService : ObservableObject
 {
     private static SettingsService _instance;
     public static SettingsService Instance => _instance ??= new SettingsService();

@@ -4,8 +4,7 @@ using MauiSamples.Services.Device;
 
 namespace MauiSamples.ViewModels;
 
-[ObservableObject]
-public partial class MainViewModel
+public partial class MainViewModel : ObservableObject
 {
     private readonly IDeviceService _deviceService;
 
