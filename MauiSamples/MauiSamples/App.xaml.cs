@@ -56,8 +56,10 @@ public partial class App : Application
 //            {
 //                return;
 //            }
-
+//
 //            mergedDictionaries.Clear();
+//            mergedDictionaries.Add(new global::Resources.Styles.Colors());
+//            mergedDictionaries.Add(new global::Resources.Styles.Styles());
 //            mergedDictionaries.Add(new Resources.Styles.Platform.SpecialStyles());
 //        }
 //        catch
