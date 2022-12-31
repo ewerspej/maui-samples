@@ -12,6 +12,7 @@ Sample project for various C# .NET and .NET MAUI features, many of which will al
 - [ ] Dependency Injection using Shell
 - [x] MVVM Code Generation (simple scenarios)
 - [ ] MVVM Code Generation (advanced scenarios)
+- [ ] Events and Behaviors (e.g. EventToCommandBehavior)
 - [ ] Status Bar Themes (Android)
 - [ ] App Preferences
 - [ ] Compiled Bindings
