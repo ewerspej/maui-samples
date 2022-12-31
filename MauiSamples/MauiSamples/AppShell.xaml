@@ -19,6 +19,12 @@
         ContentTemplate="{DataTemplate views:AddressPage}"
         Route="MvvmSample"/>
     </Tab>
+    <Tab Title="Events">
+      <ShellContent
+        Title="Events"
+        ContentTemplate="{DataTemplate views:EventsPage}"
+        Route="Event"/>
+    </Tab>
   </TabBar>
 
 

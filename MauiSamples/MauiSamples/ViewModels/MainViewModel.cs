@@ -24,4 +24,6 @@ public partial class MainViewModel : ObservableObject
     {
         _deviceService.SetScreenBrightness(0.1f);
     }
+
+
 }
