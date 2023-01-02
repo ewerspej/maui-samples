@@ -56,10 +56,8 @@ public partial class App : Application
 //            {
 //                return;
 //            }
-
 //            mergedDictionaries.Clear();
 //            mergedDictionaries.Add(new Resources.Styles.Colors());
-
 //            mergedDictionaries.Add(new Resources.Styles.Styles());
 //            mergedDictionaries.Add(new Resources.Styles.Platform.SpecialStyles());
 //        }

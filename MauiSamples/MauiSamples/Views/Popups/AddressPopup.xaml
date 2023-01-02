@@ -16,6 +16,9 @@
     HorizontalOptions="Center"
     BackgroundColor="Orange"
     Padding="10">
+    <Grid.GestureRecognizers>
+      <TapGestureRecognizer Tapped="TapGestureRecognizer_OnTapped" />
+    </Grid.GestureRecognizers>
 
     <Label
       Text="{Binding Address}"

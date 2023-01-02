@@ -1,4 +1,6 @@
 using Mopups.Pages;
+using Mopups.Services;
+
 namespace MauiSamples.Views.Popups;
 
 public partial class AddressPopup : PopupPage
@@ -19,5 +21,10 @@ public partial class AddressPopup : PopupPage
 		InitializeComponent();
         BindingContext = this;
         Address = address;
+    }
+
+    private void TapGestureRecognizer_OnTapped(object sender, TappedEventArgs e)
+    {
+        MopupService.Instance.PopAsync();
     }
 }
