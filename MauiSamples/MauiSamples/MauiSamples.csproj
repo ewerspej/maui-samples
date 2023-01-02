@@ -32,6 +32,7 @@
 
   <PropertyGroup Condition="'$(TargetFramework)'=='net7.0-ios'">
     <ProvisioningType>manual</ProvisioningType>
+    <CodesignKey>iPhone Developer</CodesignKey>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net7.0-ios|AnyCPU'">
