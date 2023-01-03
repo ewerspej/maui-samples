@@ -29,6 +29,24 @@ public partial class App : Application
 
     private void SetTheme()
     {
+//        try
+//        {
+//            if (Current?.Resources.MergedDictionaries is not { } mergedDictionaries)
+//            {
+//                return;
+//            }
+//            mergedDictionaries.Clear();
+//            mergedDictionaries.Add(new Resources.Styles.Colors());
+//            mergedDictionaries.Add(new Resources.Styles.Styles());
+//#if ANDROID || WINDOWS
+//            mergedDictionaries.Add(new Resources.Styles.Platform.SpecialStyles());
+//#endif
+//        }
+//        catch
+//        {
+//            //ignore
+//        }
+
         UserAppTheme = SettingsService.Instance?.Theme != null
                      ? SettingsService.Instance.Theme.AppTheme
                      : AppTheme.Unspecified;
@@ -48,23 +66,5 @@ public partial class App : Application
                 DeviceService.Instance.SetStatusBarColor(Colors.Black, false);
                 break;
         }
-
-//#if ANDROID || WINDOWS
-//        try
-//        {
-//            if (Current?.Resources.MergedDictionaries is not { } mergedDictionaries)
-//            {
-//                return;
-//            }
-//            mergedDictionaries.Clear();
-//            mergedDictionaries.Add(new Resources.Styles.Colors());
-//            mergedDictionaries.Add(new Resources.Styles.Styles());
-//            mergedDictionaries.Add(new Resources.Styles.Platform.SpecialStyles());
-//        }
-//        catch
-//        {
-//            //ignore
-//        }
-//#endif
     }
 }
