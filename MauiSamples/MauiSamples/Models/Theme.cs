@@ -21,4 +21,15 @@ public sealed class Theme
         AppTheme = theme;
         DisplayName = displayName;
     }
+
+    public static Theme Get(AppTheme theme)
+    {
+        return theme switch
+        {
+            AppTheme.Dark => Dark,
+            AppTheme.Light => Light,
+            AppTheme.Unspecified => System,
+            _ => throw new ArgumentOutOfRangeException(nameof(theme), theme, null)
+        };
+    }
 }
