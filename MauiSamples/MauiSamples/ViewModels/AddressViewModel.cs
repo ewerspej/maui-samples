@@ -2,10 +2,12 @@
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Windows.Input;
+using PropertyChangingEventArgs = System.ComponentModel.PropertyChangingEventArgs;
+using PropertyChangingEventHandler = System.ComponentModel.PropertyChangingEventHandler;
 
 namespace MauiSamples.ViewModels;
 
-public sealed class AddressViewModel : INotifyPropertyChanged
+public sealed class AddressViewModel : INotifyPropertyChanged, INotifyPropertyChanging
 {
     #region Delegates
 
@@ -16,8 +18,8 @@ public sealed class AddressViewModel : INotifyPropertyChanged
 
     #region Commands
 
-    private ICommand _showAddressCommand;
-    public ICommand ShowAddressCommand => _showAddressCommand ??= new Command(PrintAddress);
+    private ICommand _printAddressCommand;
+    public ICommand PrintAddressCommand => _printAddressCommand ??= new Command(PrintAddress);
 
     #endregion
 
@@ -88,6 +90,29 @@ public sealed class AddressViewModel : INotifyPropertyChanged
         }
     }
 
+    private int _copies;
+    public int Copies
+    {
+        get => _copies;
+        set
+        {
+            if (value == _copies)
+            {
+                return;
+            }
+
+            OnPropertyChanging();
+            //do something before property is changing
+            Console.WriteLine($"Property {nameof(Copies)} is about to change. Current value: {Copies}, new value: {value}");
+
+            _copies = value;
+
+            OnPropertyChanged();
+            //do something after property changed
+            Console.WriteLine($"Property {nameof(Copies)} is has changed. Current value: {Copies}, new value: {value}");
+        }
+    }
+
     public string FullAddress
     {
         get
@@ -103,13 +128,26 @@ public sealed class AddressViewModel : INotifyPropertyChanged
         }
     }
 
+    private bool _isBusy;
+    public bool IsBusy
+    {
+        get => _isBusy;
+        set => SetField(ref _isBusy, value);
+    }
+
     #endregion
 
     #region Private Methods
 
-    private void PrintAddress()
+    private async void PrintAddress()
     {
+        IsBusy = true;
+
+        await Task.Delay(TimeSpan.FromSeconds(2));
+
         OnPrintAddress?.Invoke(FullAddress);
+
+        IsBusy = false;
     }
 
     #endregion
@@ -133,6 +171,17 @@ public sealed class AddressViewModel : INotifyPropertyChanged
         field = value;
         OnPropertyChanged(propertyName);
         return true;
+    }
+
+    #endregion
+
+    #region INotifyPropertyChanging implementation
+
+    public event PropertyChangingEventHandler PropertyChanging;
+
+    private void OnPropertyChanging([CallerMemberName] string propertyName = null)
+    {
+        PropertyChanging?.Invoke(this, new PropertyChangingEventArgs(propertyName));
     }
 
     #endregion

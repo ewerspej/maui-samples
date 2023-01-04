@@ -29,6 +29,19 @@ public partial class AddressViewModelSourceGen : ObservableObject
     [NotifyPropertyChangedFor(nameof(FullAddress))]
     private string _city;
 
+    [ObservableProperty]
+    private int _copies;
+
+    partial void OnCopiesChanging(int value)
+    {
+        Console.WriteLine($"Property {nameof(Copies)} is about to change. Current value: {Copies}, new value: {value}");
+    }
+
+    partial void OnCopiesChanged(int value)
+    {
+        Console.WriteLine($"Property {nameof(Copies)} is has changed. Current value: {Copies}, new value: {value}");
+    }
+
     public string FullAddress
     {
         get
@@ -45,8 +58,10 @@ public partial class AddressViewModelSourceGen : ObservableObject
     }
 
     [RelayCommand]
-    private void PrintAddress()
+    private async Task PrintAddress()
     {
+        await Task.Delay(TimeSpan.FromSeconds(2));
+
         OnPrintAddress?.Invoke(FullAddress);
     }
 }

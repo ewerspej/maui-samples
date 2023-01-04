@@ -32,9 +32,40 @@
 
       <Label Text="{Binding FullAddress}" MaxLines="5" VerticalOptions="End" />
 
+      <Grid
+        RowDefinitions="*"
+        ColumnDefinitions="*,*,auto">
+        <Label
+          Grid.Column="0"
+          VerticalOptions="Center"
+          Text="Print copies:"/>
+        <Label
+          Grid.Column="1"
+          VerticalOptions="Center"
+          Text="{Binding Copies}"/>
+        <Stepper
+          Grid.Column="2"
+          VerticalOptions="Center"
+          Minimum="0"
+          Value="{Binding Copies}" />
+      </Grid>
+
       <Button Text="Print Address" Command="{Binding PrintAddressCommand}" />
 
     </VerticalStackLayout>
+
+    <!--<ActivityIndicator
+      HorizontalOptions="Center"
+      VerticalOptions="Center"
+      IsVisible="{Binding IsBusy}"
+      IsRunning="{Binding IsBusy}"/>-->
+
+    <ActivityIndicator
+      HorizontalOptions="Center"
+      VerticalOptions="Center"
+      IsVisible="{Binding PrintAddressCommand.IsRunning}"
+      IsRunning="{Binding PrintAddressCommand.IsRunning}"/>
+
   </Grid>
   
 </ContentPage>
