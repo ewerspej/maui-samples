@@ -66,4 +66,5 @@ public partial class AddressViewModelSourceGen : ObservableObject
 
         OnPrintAddress?.Invoke(FullAddress);
     }
+
 }
