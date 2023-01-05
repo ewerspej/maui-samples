@@ -143,11 +143,20 @@ public sealed class AddressViewModel : INotifyPropertyChanged, INotifyPropertyCh
     {
         IsBusy = true;
 
-        await Task.Delay(TimeSpan.FromSeconds(2));
-
-        OnPrintAddress?.Invoke(FullAddress);
+        await PrintAsync();
 
         IsBusy = false;
+    }
+
+    private async Task PrintAsync()
+    {
+        if (Copies < 1)
+        {
+            return;
+        }
+
+        await Task.Delay(TimeSpan.FromSeconds(2));
+        OnPrintAddress?.Invoke(FullAddress);
     }
 
     #endregion

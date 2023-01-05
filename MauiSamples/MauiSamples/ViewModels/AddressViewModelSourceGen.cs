@@ -60,6 +60,8 @@ public partial class AddressViewModelSourceGen : ObservableObject
     [RelayCommand]
     private async Task PrintAddressAsync()
     {
+        if (Copies < 1) return;
+
         await Task.Delay(TimeSpan.FromSeconds(2));
 
         OnPrintAddress?.Invoke(FullAddress);
