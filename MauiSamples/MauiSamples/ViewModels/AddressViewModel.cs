@@ -1,7 +1,7 @@
-﻿using System.ComponentModel;
+﻿using CommunityToolkit.Mvvm.Input;
+using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Text;
-using System.Windows.Input;
 using PropertyChangingEventArgs = System.ComponentModel.PropertyChangingEventArgs;
 using PropertyChangingEventHandler = System.ComponentModel.PropertyChangingEventHandler;
 
@@ -18,8 +18,8 @@ public sealed class AddressViewModel : INotifyPropertyChanged, INotifyPropertyCh
 
     #region Commands
 
-    private ICommand _printAddressCommand;
-    public ICommand PrintAddressCommand => _printAddressCommand ??= new Command(PrintAddress);
+    private IAsyncRelayCommand _printAddressCommand;
+    public IAsyncRelayCommand PrintAddressCommand => _printAddressCommand ??= new AsyncRelayCommand(PrintAddressAsync);
 
     #endregion
 
@@ -139,7 +139,7 @@ public sealed class AddressViewModel : INotifyPropertyChanged, INotifyPropertyCh
 
     #region Private Methods
 
-    private async void PrintAddress()
+    private async Task PrintAddressAsync()
     {
         IsBusy = true;
 

@@ -31,7 +31,7 @@ public partial class AddressViewModelSourceGen : ObservableObject
 
     [ObservableProperty]
     private int _copies;
-
+    
     partial void OnCopiesChanging(int value)
     {
         Console.WriteLine($"Property {nameof(Copies)} is about to change. Current value: {Copies}, new value: {value}");
@@ -58,7 +58,7 @@ public partial class AddressViewModelSourceGen : ObservableObject
     }
 
     [RelayCommand]
-    private async Task PrintAddress()
+    private async Task PrintAddressAsync()
     {
         await Task.Delay(TimeSpan.FromSeconds(2));
 
