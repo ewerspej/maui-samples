@@ -101,15 +101,15 @@ public sealed class AddressViewModel : INotifyPropertyChanged, INotifyPropertyCh
                 return;
             }
 
-            OnPropertyChanging();
             //do something before property is changing
             Console.WriteLine($"Property {nameof(Copies)} is about to change. Current value: {Copies}, new value: {value}");
+            OnPropertyChanging();
 
             _copies = value;
 
-            OnPropertyChanged();
             //do something after property changed
             Console.WriteLine($"Property {nameof(Copies)} is has changed. Current value: {Copies}, new value: {value}");
+            OnPropertyChanged();
         }
     }
 
