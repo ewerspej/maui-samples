@@ -1,5 +1,5 @@
-# maui-samples
-Sample project for various C# .NET and .NET MAUI features, many of which will also be covered in my blog: https://ewerspej.hashnode.dev/
+# .NET and MAUI samples
+This is a sample repository to demonstrate and experiment with various C# .NET and MAUI features, many of which will also be covered in my blog: https://ewerspej.hashnode.dev/
 
 ## Features currently being explored ##
 
@@ -28,4 +28,6 @@ I'm happy to cover any interesting and challenging topic. Just let me know about
 
 ## Sponsorship ##
 
-It would mean a lot to me, if you decide to sponsor my open source and blogging activities as it allows me to share my development journey with the community ❤️
+You can support me by sharing my blog and this repository, and you can sponsor me. Whatever you decide, thank you for being here and reading this ❤️
+
+<a href="https://www.buymeacoffee.com/ewerspej" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-yellow.png" alt="Buy Me A Coffee" height="41" width="174"></a>
