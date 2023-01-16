@@ -28,6 +28,8 @@ I'm happy to cover any interesting and challenging topic. Just let me know about
 
 ## Sponsorship ##
 
-You can support me by sharing my blog and this repository, and you can sponsor me. Whatever you decide, thank you for being here and reading this ❤️
+You can support me by sharing my blog and this repository, and you can sponsor me or buy me a coffee.
+
+Whatever you decide, thank you for being here and reading this ❤️
 
 <a href="https://www.buymeacoffee.com/ewerspej" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-yellow.png" alt="Buy Me A Coffee" height="41" width="174"></a>
