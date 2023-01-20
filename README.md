@@ -14,6 +14,7 @@ This is a sample repository to demonstrate and experiment with various C# .NET a
 - [ ] Dependency Injection using Shell
 - [ ] Localization
 - [ ] Unit Tests
+- [ ] Guard Clauses
 - [ ] Events and Behaviors (e.g. EventToCommandBehavior)
 - [ ] Status Bar Themes (Android)
 - [ ] App Preferences
