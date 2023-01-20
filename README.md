@@ -13,6 +13,7 @@ This is a sample repository to demonstrate and experiment with various C# .NET a
 - [x] Events and Behaviors (e.g. EventToCommandBehavior)
 - [ ] Compiled Bindings
 - [ ] Dependency Injection using Shell
+- [ ] Device Orientation (Portrait/Landscape)
 - [ ] Localization
 - [ ] Unit Tests
 - [ ] Guard Clauses
