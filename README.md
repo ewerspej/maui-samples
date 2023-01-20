@@ -10,12 +10,13 @@ This is a sample repository to demonstrate and experiment with various C# .NET a
 - [x] Platform specific APIs
 - [x] MVVM Code Generation (simple scenarios)
 - [x] MVVM Code Generation (advanced scenarios)
-- [ ] Unit Tests
+- [ ] Compiled Bindings
 - [ ] Dependency Injection using Shell
+- [ ] Localization
+- [ ] Unit Tests
 - [ ] Events and Behaviors (e.g. EventToCommandBehavior)
 - [ ] Status Bar Themes (Android)
 - [ ] App Preferences
-- [ ] Compiled Bindings
 - [ ] Background Services
 - [ ] Media Playback (Audio, Video)
 - [ ] ...
