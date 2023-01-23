@@ -41,8 +41,9 @@
 
           <!-- Note: We are binding to the SettingsService singleton and the DisplayName of the Theme -->
           <Picker
-            x:Name="ThemePicker"
-            ItemDisplayBinding="{Binding SelectedItem.DisplayName, Source={x:Reference ThemePicker}}"
+            x:DataType="{x:Null}"
+            BindingContext="{Binding Source={x:Static models:Theme.AvailableThemes}}"
+            ItemDisplayBinding="{Binding DisplayName}"
             ItemsSource="{Binding Source={x:Static models:Theme.AvailableThemes}}"
             SelectedItem="{Binding Path=Theme, Source={x:Static settings:SettingsService.Instance}}"
             VerticalOptions="Center" />

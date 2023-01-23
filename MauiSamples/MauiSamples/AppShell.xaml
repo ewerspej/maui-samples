@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <Shell
-    x:Class="MauiSamples.AppShell"
-    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:views="clr-namespace:MauiSamples.Views"
-    Shell.FlyoutBehavior="Disabled">
+  x:Class="MauiSamples.AppShell"
+  xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+  xmlns:views="clr-namespace:MauiSamples.Views"
+  Shell.FlyoutBehavior="Disabled">
 
   <TabBar>
     <Tab Title="Home">
@@ -17,13 +17,19 @@
       <ShellContent
         Title="MVVM Goodness"
         ContentTemplate="{DataTemplate views:AddressPage}"
-        Route="MvvmSample"/>
+        Route="MvvmSample" />
     </Tab>
     <Tab Title="Events">
       <ShellContent
         Title="Events"
         ContentTemplate="{DataTemplate views:EventsPage}"
-        Route="Event"/>
+        Route="Event" />
+    </Tab>
+    <Tab Title="Bindings">
+      <ShellContent
+        Title="Bindings"
+        ContentTemplate="{DataTemplate views:BindingsPage}"
+        Route="Bindings" />
     </Tab>
   </TabBar>
 

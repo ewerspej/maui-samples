@@ -142,6 +142,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <MauiXaml Update="Views\BindingsPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </MauiXaml>
     <MauiXaml Update="Views\EventsPage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </MauiXaml>

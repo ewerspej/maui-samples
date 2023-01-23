@@ -1,4 +1,6 @@
 ﻿using CommunityToolkit.Maui;
+using MauiSamples.ViewModels;
+using MauiSamples.Views;
 using Microsoft.Extensions.Logging;
 using Mopups.Hosting;
 
@@ -22,6 +24,9 @@ public static class MauiProgram
 #if DEBUG
         builder.Logging.AddDebug();
 #endif
+
+        builder.Services.AddTransient<BindingsViewModel>();
+        builder.Services.AddTransient<BindingsPage>();
 
         return builder.Build();
     }
