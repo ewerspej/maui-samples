@@ -34,12 +34,14 @@ public partial class AddressViewModelSourceGen : ObservableObject
     
     partial void OnCopiesChanging(int value)
     {
-        Console.WriteLine($"Property {nameof(Copies)} is about to change. Current value: {Copies}, new value: {value}");
+        Console.WriteLine($"Property {nameof(Copies)} is about to change. " +
+                          $"Current value: {Copies}, new value: {value}");
     }
 
     partial void OnCopiesChanged(int value)
     {
-        Console.WriteLine($"Property {nameof(Copies)} is has changed. Current value: {Copies}, new value: {value}");
+        Console.WriteLine($"Property {nameof(Copies)} has changed. " +
+                          $"Current value: {Copies}, new value: {value}");
     }
 
     public string FullAddress
