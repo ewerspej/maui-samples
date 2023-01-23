@@ -1,56 +1,99 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MauiSamples.Views.AddressPage">
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+  x:Class="MauiSamples.Views.AddressPage"
+  xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+  xmlns:viewModels="clr-namespace:MauiSamples.ViewModels"
+  x:DataType="viewModels:AddressViewModelSourceGen">
 
   <Grid>
     <VerticalStackLayout
-      VerticalOptions="Fill"
       Padding="20"
-      Spacing="40">
+      Spacing="40"
+      VerticalOptions="Fill">
 
       <Grid
-        RowDefinitions="auto,auto,auto,auto,auto"
-        ColumnDefinitions="*,*">
+        ColumnDefinitions="*,*"
+        RowDefinitions="auto,auto,auto,auto,auto">
 
-        <Label Text="First Name:" VerticalTextAlignment="Center" Grid.Row="0" Grid.Column="0" />
-        <Entry Text="{Binding FirstName}" Grid.Row="0" Grid.Column="1" />
+        <Label
+          Grid.Row="0"
+          Grid.Column="0"
+          Text="First Name:"
+          VerticalTextAlignment="Center" />
+        <Entry
+          Grid.Row="0"
+          Grid.Column="1"
+          Text="{Binding FirstName}" />
 
-        <Label Text="Last Name:" VerticalTextAlignment="Center" Grid.Row="1" Grid.Column="0" />
-        <Entry Text="{Binding LastName}" Grid.Row="1" Grid.Column="1" />
+        <Label
+          Grid.Row="1"
+          Grid.Column="0"
+          Text="Last Name:"
+          VerticalTextAlignment="Center" />
+        <Entry
+          Grid.Row="1"
+          Grid.Column="1"
+          Text="{Binding LastName}" />
 
-        <Label Text="Street/No.:" VerticalTextAlignment="Center" Grid.Row="2" Grid.Column="0" />
-        <Entry Text="{Binding StreetAddress}" Grid.Row="2" Grid.Column="1" />
+        <Label
+          Grid.Row="2"
+          Grid.Column="0"
+          Text="Street/No.:"
+          VerticalTextAlignment="Center" />
+        <Entry
+          Grid.Row="2"
+          Grid.Column="1"
+          Text="{Binding StreetAddress}" />
 
-        <Label Text="Post Code:" VerticalTextAlignment="Center" Grid.Row="3" Grid.Column="0" />
-        <Entry Text="{Binding PostCode}" Grid.Row="3" Grid.Column="1" />
+        <Label
+          Grid.Row="3"
+          Grid.Column="0"
+          Text="Post Code:"
+          VerticalTextAlignment="Center" />
+        <Entry
+          Grid.Row="3"
+          Grid.Column="1"
+          Text="{Binding PostCode}" />
 
-        <Label Text="City:" VerticalTextAlignment="Center" Grid.Row="4" Grid.Column="0" />
-        <Entry Text="{Binding City}" Grid.Row="4" Grid.Column="1" />
+        <Label
+          Grid.Row="4"
+          Grid.Column="0"
+          Text="City:"
+          VerticalTextAlignment="Center" />
+        <Entry
+          Grid.Row="4"
+          Grid.Column="1"
+          Text="{Binding City}" />
 
       </Grid>
 
-      <Label Text="{Binding FullAddress}" MaxLines="5" VerticalOptions="End" />
+      <Label
+        MaxLines="5"
+        Text="{Binding FullAddress}"
+        VerticalOptions="End" />
 
       <Grid
-        RowDefinitions="*"
-        ColumnDefinitions="*,*,auto">
+        ColumnDefinitions="*,*,auto"
+        RowDefinitions="*">
         <Label
           Grid.Column="0"
-          VerticalOptions="Center"
-          Text="Print copies:"/>
+          Text="Print copies:"
+          VerticalOptions="Center" />
         <Label
           Grid.Column="1"
-          VerticalOptions="Center"
-          Text="{Binding Copies}"/>
+          Text="{Binding Copies}"
+          VerticalOptions="Center" />
         <Stepper
           Grid.Column="2"
-          VerticalOptions="Center"
           Minimum="0"
+          VerticalOptions="Center"
           Value="{Binding Copies}" />
       </Grid>
 
-      <Button Text="Print Address" Command="{Binding PrintAddressCommand}" />
+      <Button
+        Command="{Binding PrintAddressCommand}"
+        Text="Print Address" />
 
     </VerticalStackLayout>
 
@@ -62,10 +105,10 @@
 
     <ActivityIndicator
       HorizontalOptions="Center"
-      VerticalOptions="Center"
+      IsRunning="{Binding PrintAddressCommand.IsRunning}"
       IsVisible="{Binding PrintAddressCommand.IsRunning}"
-      IsRunning="{Binding PrintAddressCommand.IsRunning}"/>
+      VerticalOptions="Center" />
 
   </Grid>
-  
+
 </ContentPage>

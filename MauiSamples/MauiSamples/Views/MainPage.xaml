@@ -1,16 +1,18 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:d="http://schemas.microsoft.com/dotnet/2021/maui/design"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             xmlns:models="clr-namespace:MauiSamples.Models"
-             xmlns:settings="clr-namespace:MauiSamples.Services.Settings"
-             mc:Ignorable="d"
-             x:Class="MauiSamples.Views.MainPage">
+<ContentPage
+  x:Class="MauiSamples.Views.MainPage"
+  xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+  xmlns:models="clr-namespace:MauiSamples.Models"
+  xmlns:settings="clr-namespace:MauiSamples.Services.Settings"
+  xmlns:viewModels="clr-namespace:MauiSamples.ViewModels"
+  x:DataType="viewModels:MainViewModel">
 
   <ContentPage.Resources>
     <ResourceDictionary>
-      <Style TargetType="Label" x:Key="LabelStyle">
+      <Style
+        x:Key="LabelStyle"
+        TargetType="Label">
         <Setter Property="Text" Value="{AppThemeBinding Light=Light, Dark=Dark}" />
       </Style>
     </ResourceDictionary>
@@ -19,50 +21,58 @@
   <Grid>
     <ScrollView>
       <VerticalStackLayout
-        Spacing="25"
-        Padding="30,0"
         Margin="0,50,0,0"
+        Padding="30,0"
+        Spacing="25"
         VerticalOptions="Start">
 
-        <Label 
+        <Label
+          FontSize="Title"
           HorizontalOptions="Center"
-          Style="{DynamicResource LabelStyle}"
-          FontSize="Title"/>
+          Style="{DynamicResource LabelStyle}" />
 
         <HorizontalStackLayout
-          VerticalOptions="Center"
-          HorizontalOptions="Center">
+          HorizontalOptions="Center"
+          VerticalOptions="Center">
+
           <Label
-            VerticalOptions="Center"
-            Text="Select Theme: " />
+            Text="Select Theme: "
+            VerticalOptions="Center" />
 
           <!-- Note: We are binding to the SettingsService singleton and the DisplayName of the Theme -->
           <Picker
-            VerticalOptions="Center"
+            x:Name="ThemePicker"
+            ItemDisplayBinding="{Binding SelectedItem.DisplayName, Source={x:Reference ThemePicker}}"
             ItemsSource="{Binding Source={x:Static models:Theme.AvailableThemes}}"
-            ItemDisplayBinding="{Binding DisplayName}"
-            SelectedItem="{Binding Path=Theme, Source={x:Static settings:SettingsService.Instance}}"/>
+            SelectedItem="{Binding Path=Theme, Source={x:Static settings:SettingsService.Instance}}"
+            VerticalOptions="Center" />
         </HorizontalStackLayout>
 
-        <Button Text="Say Hello" Pressed="SayHello" />
+        <Button
+          Pressed="SayHello"
+          Text="Say Hello" />
 
-        <Button Text="Hello from Platform" Pressed="OpenHelloView" />
+        <Button
+          Pressed="OpenHelloView"
+          Text="Hello from Platform" />
 
-        <Button Text="Hello with Platform View" Pressed="OpenWithPlatformView" />
+        <Button
+          Pressed="OpenWithPlatformView"
+          Text="Hello with Platform View" />
 
         <HorizontalStackLayout
-          Spacing="30"
-          HorizontalOptions="Center">
+          HorizontalOptions="Center"
+          Spacing="30">
           <Button
-            Text="Dim Display"
+            Command="{Binding SetLowBrightnessCommand}"
             HorizontalOptions="Start"
-            WidthRequest="100"
-            Command="{Binding SetLowBrightnessCommand}"/>
+            Text="Dim Display"
+            WidthRequest="100" />
           <Button
-            Text="Undim Display"
+            Command="{Binding SetHighBrightnessCommand}"
             HorizontalOptions="End"
-            WidthRequest="100"
-            Command="{Binding SetHighBrightnessCommand}"/>
+            Text="Undim Display"
+            WidthRequest="100" />
         </HorizontalStackLayout>
 
       </VerticalStackLayout>
@@ -70,4 +80,3 @@
   </Grid>
 
 </ContentPage>
-  
