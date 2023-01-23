@@ -132,10 +132,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Models\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Compile Update="Views\AddressPage.xaml.cs">
       <DependentUpon>AddressPage.xaml</DependentUpon>
     </Compile>
