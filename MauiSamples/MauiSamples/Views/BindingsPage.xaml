@@ -16,6 +16,7 @@
       Grid.Row="0"
       ItemsSource="{Binding Items}">
       <ListView.ItemTemplate>
+        <!-- redefining the DataType here -->
         <DataTemplate x:DataType="models:BindingItem">
           <ViewCell>
             <Grid
