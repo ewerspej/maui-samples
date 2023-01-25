@@ -5,7 +5,8 @@
   xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
   xmlns:models="clr-namespace:MauiSamples.Models"
   xmlns:viewModels="clr-namespace:MauiSamples.ViewModels"
-  x:DataType="viewModels:BindingsViewModel">
+  x:DataType="viewModels:BindingsViewModel"
+  Shell.NavBarIsVisible="False">
 
   <Grid
     RowDefinitions="*, auto"
@@ -25,11 +26,16 @@
                 HorizontalOptions="Start"
                 Text="{Binding Name}"
                 VerticalTextAlignment="Center" />
-              <Label
+              <Button
                 Grid.Column="1"
                 HorizontalOptions="End"
-                Text="{Binding Count}"
-                VerticalTextAlignment="Center" />
+                VerticalOptions="Center"
+                Text="Remove"
+                WidthRequest="100"
+                HeightRequest="40"
+                BackgroundColor="Red"
+                Command="{Binding RemoveItemCommand, Source={RelativeSource AncestorType={x:Type viewModels:BindingsViewModel}}}"
+                CommandParameter="{Binding .}" />
             </Grid>
           </ViewCell>
         </DataTemplate>
@@ -44,14 +50,14 @@
         Command="{Binding AddItemCommand}"
         HorizontalOptions="Center"
         VerticalOptions="End"
-        Text="Add"
-        WidthRequest="100" />
+        Text="Add Item"
+        WidthRequest="150" />
       <Button
         Command="{Binding RemoveItemCommand}"
         HorizontalOptions="Center"
         VerticalOptions="End"
-        Text="Remove"
-        WidthRequest="100" />
+        Text="Remove Last"
+        WidthRequest="150" />
     </HorizontalStackLayout>
 
   </Grid>
