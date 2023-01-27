@@ -14,6 +14,7 @@ This is a sample repository to demonstrate and experiment with various C# .NET a
 - [x] Compiled Bindings
 - [ ] Dependency Injection using Shell
 - [ ] Device Orientation (Portrait/Landscape)
+- [ ] Fullscreen / Immersive Mode
 - [ ] Localization
 - [ ] Unit Tests
 - [ ] Guard Clauses
