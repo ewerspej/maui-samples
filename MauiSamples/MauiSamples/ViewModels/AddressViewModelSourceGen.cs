@@ -30,8 +30,9 @@ public partial class AddressViewModelSourceGen : ObservableObject
     private string _city;
 
     [ObservableProperty]
+    [NotifyCanExecuteChangedFor(nameof(PrintAddressCommand))]
     private int _copies;
-    
+
     partial void OnCopiesChanging(int value)
     {
         Console.WriteLine($"Property {nameof(Copies)} is about to change. " +
@@ -59,13 +60,12 @@ public partial class AddressViewModelSourceGen : ObservableObject
         }
     }
 
-    [RelayCommand]
-    private async Task PrintAddressAsync()
+    [RelayCommand(CanExecute = nameof(CanPrint))]
+    private async Task PrintAddressAsync(string address)
     {
-        if (Copies < 1) return;
-
         await Task.Delay(TimeSpan.FromSeconds(2));
-
-        OnPrintAddress?.Invoke(FullAddress);
+        OnPrintAddress?.Invoke(address);
     }
+
+    private bool CanPrint(string address) => Copies > 0 && !string.IsNullOrWhiteSpace(address);
 }

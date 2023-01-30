@@ -9,7 +9,7 @@
   <Grid>
     <VerticalStackLayout
       Padding="20"
-      Spacing="40"
+      Spacing="20"
       VerticalOptions="Fill">
 
       <Grid
@@ -93,6 +93,7 @@
 
       <Button
         Command="{Binding PrintAddressCommand}"
+        CommandParameter="{Binding FullAddress}"
         Text="Print Address" />
 
     </VerticalStackLayout>

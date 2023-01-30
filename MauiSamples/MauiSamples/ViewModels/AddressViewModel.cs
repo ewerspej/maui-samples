@@ -19,7 +19,7 @@ public sealed class AddressViewModel : INotifyPropertyChanged, INotifyPropertyCh
     #region Commands
 
     private IAsyncRelayCommand _printAddressCommand;
-    public IAsyncRelayCommand PrintAddressCommand => _printAddressCommand ??= new AsyncRelayCommand(PrintAddressAsync);
+    public IAsyncRelayCommand PrintAddressCommand => _printAddressCommand ??= new AsyncRelayCommand<string>(PrintAddressAsync, canExecute: CanPrint);
 
     #endregion
 
@@ -112,6 +112,8 @@ public sealed class AddressViewModel : INotifyPropertyChanged, INotifyPropertyCh
             Console.WriteLine($"Property {nameof(Copies)} has changed. " +
                               $"Current value: {Copies}, new value: {value}");
             OnPropertyChanged();
+
+            PrintAddressCommand.NotifyCanExecuteChanged();
         }
     }
 
@@ -141,25 +143,22 @@ public sealed class AddressViewModel : INotifyPropertyChanged, INotifyPropertyCh
 
     #region Private Methods
 
-    private async Task PrintAddressAsync()
+    private async Task PrintAddressAsync(string address)
     {
         IsBusy = true;
 
-        await PrintAsync();
+        await PrintAsync(address);
 
         IsBusy = false;
     }
 
-    private async Task PrintAsync()
+    private async Task PrintAsync(string address)
     {
-        if (Copies < 1)
-        {
-            return;
-        }
-
         await Task.Delay(TimeSpan.FromSeconds(2));
-        OnPrintAddress?.Invoke(FullAddress);
+        OnPrintAddress?.Invoke(address);
     }
+
+    private bool CanPrint(string address) => Copies > 0 && !string.IsNullOrWhiteSpace(address);
 
     #endregion
 
