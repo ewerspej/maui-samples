@@ -144,6 +144,9 @@
     <MauiXaml Update="Views\EventsPage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </MauiXaml>
+    <MauiXaml Update="Views\MultiBinding.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </MauiXaml>
     <MauiXaml Update="Views\Platform\HelloFromAndroid.xaml">
       <Generator>MSBuild:Compile</Generator>
     </MauiXaml>

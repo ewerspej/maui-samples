@@ -31,6 +31,12 @@
         ContentTemplate="{DataTemplate views:BindingsPage}"
         Route="Bindings" />
     </Tab>
+    <!--<Tab Title="MultiBinding">
+      <ShellContent
+        Title="MultiBinding"
+        ContentTemplate="{DataTemplate views:MultiBinding}"
+        Route="MultiBinding"/>
+    </Tab>-->
   </TabBar>
 
 
