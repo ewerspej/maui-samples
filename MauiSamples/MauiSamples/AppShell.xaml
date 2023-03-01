@@ -19,17 +19,23 @@
         ContentTemplate="{DataTemplate views:AddressPage}"
         Route="MvvmSample" />
     </Tab>
-    <Tab Title="Events">
-      <ShellContent
-        Title="Events"
-        ContentTemplate="{DataTemplate views:EventsPage}"
-        Route="Event" />
-    </Tab>
     <Tab Title="Bindings">
       <ShellContent
         Title="Bindings"
         ContentTemplate="{DataTemplate views:BindingsPage}"
         Route="Bindings" />
+    </Tab>
+    <Tab Title="Video">
+      <ShellContent
+        Title="Video"
+        ContentTemplate="{DataTemplate views:VideoPage}"
+        Route="Video"/>
+    </Tab>
+    <Tab Title="Events">
+      <ShellContent
+        Title="Events"
+        ContentTemplate="{DataTemplate views:EventsPage}"
+        Route="Event" />
     </Tab>
     <!--<Tab Title="MultiBinding">
       <ShellContent

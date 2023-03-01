@@ -14,6 +14,7 @@ public static class MauiProgram
         builder
             .UseMauiApp<App>()
             .UseMauiCommunityToolkit()
+            .UseMauiCommunityToolkitMediaElement()
             .ConfigureMopups()
             .ConfigureFonts(fonts =>
             {
