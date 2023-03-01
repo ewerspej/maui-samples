@@ -37,3 +37,7 @@ You can support me by sharing my blog and this repository, and you can sponsor m
 Whatever you decide, thank you for being here and reading this ❤️
 
 <a href="https://www.buymeacoffee.com/ewerspej" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-yellow.png" alt="Buy Me A Coffee" height="41" width="174"></a>
+
+## Acknowledgements
+
+Frog Video by <a href="https://pixabay.com/users/meditation_hypnosis-25780195/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=video&amp;utm_content=113403">Ivan</a> from <a href="https://pixabay.com//?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=video&amp;utm_content=113403">Pixabay</a>
