@@ -12,8 +12,8 @@ This is a sample repository to demonstrate and experiment with various C# .NET a
 - [x] MVVM Code Generation (advanced scenarios)
 - [x] Events and Behaviors (e.g. EventToCommandBehavior)
 - [x] Compiled Bindings
+- [x] Device Orientation (Portrait/Landscape)
 - [ ] Dependency Injection using Shell
-- [ ] Device Orientation (Portrait/Landscape)
 - [ ] Fullscreen / Immersive Mode
 - [ ] Localization
 - [ ] Unit Tests
