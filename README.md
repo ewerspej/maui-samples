@@ -13,6 +13,7 @@ This is a sample repository to demonstrate and experiment with various C# .NET a
 - [x] Events and Behaviors (e.g. EventToCommandBehavior)
 - [x] Compiled Bindings
 - [x] Device Orientation (Portrait/Landscape)
+- [x] Custom TitleView
 - [ ] Dependency Injection using Shell
 - [ ] Fullscreen / Immersive Mode
 - [ ] Localization
