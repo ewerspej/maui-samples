@@ -6,7 +6,9 @@
   xmlns:models="clr-namespace:MauiSamples.Models"
   xmlns:settings="clr-namespace:MauiSamples.Services.Settings"
   xmlns:viewModels="clr-namespace:MauiSamples.ViewModels"
-  x:DataType="viewModels:MainViewModel">
+  x:DataType="viewModels:MainViewModel"
+  Shell.BackgroundColor="DarkGreen"
+  Shell.ForegroundColor="White">
 
   <ContentPage.Resources>
     <ResourceDictionary>
@@ -19,13 +21,14 @@
   </ContentPage.Resources>
 
   <Shell.TitleView>
-    <HorizontalStackLayout>
+    <HorizontalStackLayout VerticalOptions="Fill">
       <Label
         Text="Welcome to MAUI"
         FontFamily="Strande2"
         TextColor="White"
-        VerticalTextAlignment="Center"
-        FontSize="Large" />
+        VerticalTextAlignment="End"
+        VerticalOptions="CenterAndExpand"
+        FontSize="Medium" />
     </HorizontalStackLayout>
   </Shell.TitleView>
 
@@ -34,16 +37,26 @@
       <ToolbarItem.IconImageSource>
         <FontImageSource
           FontFamily="MaterialIconsOutlined-Regular"
-          Glyph="&#xe51c;"/>
+          Glyph="&#xe51c;"
+          Color="LightBlue"
+          Size="20"/>
       </ToolbarItem.IconImageSource>
     </ToolbarItem>
     <ToolbarItem Command="{Binding SetHighBrightnessCommand}">
       <ToolbarItem.IconImageSource>
         <FontImageSource
           FontFamily="MaterialIconsOutlined-Regular"
-          Glyph="&#xe518;"/>
+          Glyph="&#xe518;"
+          Color="LightPink"
+          Size="32"/>
       </ToolbarItem.IconImageSource>
     </ToolbarItem>
+    <ToolbarItem
+      Order="Secondary"
+      Text="Item 3" />
+    <ToolbarItem
+      Order="Secondary"
+      Text="Item 4" />
   </ContentPage.ToolbarItems>
 
   <Grid>
