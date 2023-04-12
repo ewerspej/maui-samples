@@ -1,4 +1,6 @@
-﻿namespace MauiSamples.Services.Device.Platform;
+﻿using System.Diagnostics;
+
+namespace MauiSamples.Services.Device.Platform;
 
 public partial class DeviceService : IDeviceService
 {
@@ -7,7 +9,13 @@ public partial class DeviceService : IDeviceService
 
     private DeviceService() {}
 
-    public partial void SetScreenBrightness(float brightness);
-
     public partial void SetStatusBarColor(Color color, bool isLight);
+
+    public void SetScreenBrightness(float brightness)
+    {
+        SetPlatformBrightness(brightness);
+        Debug.WriteLine($"Brightness set to {brightness:F}");
+    }
+    
+    private partial void SetPlatformBrightness(float brightness);
 }

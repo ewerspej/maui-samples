@@ -2,7 +2,7 @@
 
 partial class DeviceService
 {
-    public partial void SetScreenBrightness(float brightness)
+    private partial void SetPlatformBrightness(float brightness)
     {
         //ignore
     }

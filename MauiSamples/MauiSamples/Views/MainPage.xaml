@@ -18,6 +18,34 @@
     </ResourceDictionary>
   </ContentPage.Resources>
 
+  <Shell.TitleView>
+    <HorizontalStackLayout>
+      <Label
+        Text="Welcome to MAUI"
+        FontFamily="Strande2"
+        TextColor="White"
+        VerticalTextAlignment="Center"
+        FontSize="Large" />
+    </HorizontalStackLayout>
+  </Shell.TitleView>
+
+  <ContentPage.ToolbarItems>
+    <ToolbarItem Command="{Binding SetLowBrightnessCommand}">
+      <ToolbarItem.IconImageSource>
+        <FontImageSource
+          FontFamily="MaterialIconsOutlined-Regular"
+          Glyph="&#xe51c;"/>
+      </ToolbarItem.IconImageSource>
+    </ToolbarItem>
+    <ToolbarItem Command="{Binding SetHighBrightnessCommand}">
+      <ToolbarItem.IconImageSource>
+        <FontImageSource
+          FontFamily="MaterialIconsOutlined-Regular"
+          Glyph="&#xe518;"/>
+      </ToolbarItem.IconImageSource>
+    </ToolbarItem>
+  </ContentPage.ToolbarItems>
+
   <Grid>
     <ScrollView>
       <VerticalStackLayout
@@ -39,7 +67,7 @@
             Text="Select Theme: "
             VerticalOptions="Center" />
 
-          <!-- Note: We are binding to the SettingsService singleton and the DisplayName of the Theme -->
+          <!-- Note: We are binding to the SettingsService and the DisplayName of the Theme -->
           <Picker
             x:DataType="{x:Null}"
             BindingContext="{Binding Source={x:Static models:Theme.AvailableThemes}}"
@@ -60,21 +88,6 @@
         <Button
           Pressed="OpenWithPlatformView"
           Text="Hello with Platform View" />
-
-        <HorizontalStackLayout
-          HorizontalOptions="Center"
-          Spacing="30">
-          <Button
-            Command="{Binding SetLowBrightnessCommand}"
-            HorizontalOptions="Start"
-            Text="Dim Display"
-            WidthRequest="100" />
-          <Button
-            Command="{Binding SetHighBrightnessCommand}"
-            HorizontalOptions="End"
-            Text="Undim Display"
-            WidthRequest="100" />
-        </HorizontalStackLayout>
 
       </VerticalStackLayout>
     </ScrollView>

@@ -7,7 +7,7 @@ namespace MauiSamples.Services.Device.Platform;
 
 partial class DeviceService
 {
-    public partial void SetScreenBrightness(float brightness)
+    private partial void SetPlatformBrightness(float brightness)
     {
         if (AndroidPlatform.CurrentActivity?.Window?.Attributes == null)
         {
