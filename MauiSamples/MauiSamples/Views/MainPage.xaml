@@ -52,12 +52,12 @@
           Size="32"/>
       </ToolbarItem.IconImageSource>
     </ToolbarItem>
-    <!--<ToolbarItem
+    <ToolbarItem
       Order="Secondary"
       Text="Item 3" />
     <ToolbarItem
       Order="Secondary"
-      Text="Item 4" />-->
+      Text="Item 4" />
   </ContentPage.ToolbarItems>
 
   <Grid>
