@@ -46,5 +46,10 @@ public partial class MainPage : ContentPage
     {
         await Navigation.PushAsync(new PageWithPlatformSpecificView());
     }
+
+    private async void OnGraphicsPageButtonClicked(object sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new GraphicsPage());
+    }
 }
 

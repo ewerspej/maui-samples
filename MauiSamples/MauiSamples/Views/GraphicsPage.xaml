@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+  xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+  xmlns:graphics="clr-namespace:MauiSamples.Graphics"
+  xmlns:drawables="clr-namespace:MauiSamples.Graphics.Drawables"
+  xmlns:viewModels="clr-namespace:MauiSamples.ViewModels"
+  x:Class="MauiSamples.Views.GraphicsPage"
+  Title="GraphicsPage"
+  x:DataType="viewModels:GraphicsViewModel">
+  <VerticalStackLayout>
+
+    <graphics:SampleGraphicsView
+      HorizontalOptions="Center"
+      VerticalOptions="Center"
+      HeightRequest="300"
+      WidthRequest="300"
+      Radius="{Binding Radius}">
+      <GraphicsView.Drawable>
+        <drawables:CircleDrawable />
+      </GraphicsView.Drawable>
+    </graphics:SampleGraphicsView>
+
+    <Stepper
+      Value="{Binding Radius}"
+      HorizontalOptions="Center" />
+
+  </VerticalStackLayout>
+</ContentPage>

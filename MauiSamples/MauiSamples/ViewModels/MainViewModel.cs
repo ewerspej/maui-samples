@@ -24,4 +24,7 @@ public partial class MainViewModel : ObservableObject
     {
         _deviceService.SetScreenBrightness(0.1f);
     }
+
+    [ObservableProperty]
+    private double _radius = 100.0;
 }
