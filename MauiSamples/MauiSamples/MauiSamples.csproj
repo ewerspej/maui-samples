@@ -145,6 +145,9 @@
     <MauiXaml Update="Views\BindingsPage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </MauiXaml>
+    <MauiXaml Update="Views\Custom\CustomLabel.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </MauiXaml>
     <MauiXaml Update="Views\EventsPage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </MauiXaml>

@@ -6,6 +6,7 @@
   xmlns:models="clr-namespace:MauiSamples.Models"
   xmlns:settings="clr-namespace:MauiSamples.Services.Settings"
   xmlns:viewModels="clr-namespace:MauiSamples.ViewModels"
+  xmlns:custom="clr-namespace:MauiSamples.Views.Custom"
   x:DataType="viewModels:MainViewModel"
   Shell.BackgroundColor="DarkGreen"
   Shell.ForegroundColor="White">
@@ -90,6 +91,13 @@
             SelectedItem="{Binding Path=Theme, Source={x:Static settings:SettingsService.Instance}}"
             VerticalOptions="Center" />
         </HorizontalStackLayout>
+
+        <custom:CustomLabel 
+          Text="This is a CustomLabel that changes its Color based on the AppTheme"/>
+
+        <custom:CustomLabel 
+          TextColor="Orange"
+          Text="This is a CustomLabel that overrides the Color value"/>
 
         <Button
           Pressed="SayHello"
