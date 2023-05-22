@@ -1,15 +1,14 @@
-﻿using MauiSamples.Services.Device.Platform;
-using MauiSamples.ViewModels;
+﻿using MauiSamples.ViewModels;
 using MauiSamples.Views.Platform;
 
 namespace MauiSamples.Views;
 
-public partial class MainPage : ContentPage
+public partial class MainPage
 {
-    public MainPage()
+    public MainPage(MainViewModel viewModel)
     {
         InitializeComponent();
-        BindingContext = new MainViewModel(DeviceService.Instance);
+        BindingContext = viewModel;
     }
 
     private async void SayHello(object sender, EventArgs e)
@@ -52,4 +51,3 @@ public partial class MainPage : ContentPage
         await Navigation.PushAsync(new GraphicsPage());
     }
 }
-

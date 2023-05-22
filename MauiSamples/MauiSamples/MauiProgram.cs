@@ -1,4 +1,6 @@
 ﻿using CommunityToolkit.Maui;
+using MauiSamples.Services.Device;
+using MauiSamples.Services.Device.Platform;
 using MauiSamples.ViewModels;
 using MauiSamples.Views;
 using Microsoft.Extensions.Logging;
@@ -29,6 +31,9 @@ public static class MauiProgram
         builder.Logging.AddDebug();
 #endif
 
+        builder.Services.AddSingleton<IDeviceService>(DeviceService.Instance);
+        builder.Services.AddSingleton<MainViewModel>();
+        builder.Services.AddSingleton<MainPage>();
         builder.Services.AddTransient<BindingsViewModel>();
         builder.Services.AddTransient<BindingsPage>();
 
