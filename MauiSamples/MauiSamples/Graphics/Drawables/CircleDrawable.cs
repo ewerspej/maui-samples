@@ -6,7 +6,7 @@
 
         public void Draw(ICanvas canvas, RectF dirtyRect)
         {
-            canvas.StrokeColor = Colors.Black;
+            canvas.StrokeColor = Colors.Green;
             canvas.StrokeSize = 5.0f;
             canvas.DrawCircle(dirtyRect.Center, Radius);
         }
