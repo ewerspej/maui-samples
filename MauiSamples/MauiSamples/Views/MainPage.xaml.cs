@@ -50,4 +50,9 @@ public partial class MainPage
     {
         await Navigation.PushAsync(new GraphicsPage());
     }
+
+    private async void OnMultiBindingPageButtonClicked(object sender, EventArgs e)
+    {
+        await Shell.Current.GoToAsync(nameof(MultiBindingPage));
+    }
 }

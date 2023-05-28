@@ -2,9 +2,9 @@ using MauiSamples.ViewModels;
 
 namespace MauiSamples.Views;
 
-public partial class MultiBinding : ContentPage
+public partial class MultiBindingPage : ContentPage
 {
-	public MultiBinding()
+	public MultiBindingPage()
 	{
 		InitializeComponent();
         BindingContext = new MultiBindingViewModel();

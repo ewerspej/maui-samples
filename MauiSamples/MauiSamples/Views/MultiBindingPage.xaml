@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:converters="clr-namespace:MauiSamples.Converters"
              xmlns:viewModels="clr-namespace:MauiSamples.ViewModels"
-             x:Class="MauiSamples.Views.MultiBinding"
+             x:Class="MauiSamples.Views.MultiBindingPage"
              Title="MultiBinding"
              x:DataType="viewModels:MultiBindingViewModel">
 
@@ -15,12 +15,12 @@
     <Entry x:Name="Email" Text="{Binding Email, Mode=TwoWay}"/>
     <Entry x:Name="Phone" Text="{Binding Phone, Mode=TwoWay}"/>
     <Button Command="{Binding SaveCommand}">
-      <!--<Button.IsEnabled>
+      <Button.IsEnabled>
         <MultiBinding Converter="{StaticResource AllNotNullOrEmptyConverter}">
           <Binding Path="Text" Source="{x:Reference Email}" />
           <Binding Path="Text" Source="{x:Reference Phone}" />
         </MultiBinding>
-      </Button.IsEnabled>-->
+      </Button.IsEnabled>
     </Button>
   </VerticalStackLayout>
 </ContentPage>

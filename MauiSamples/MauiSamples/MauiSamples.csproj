@@ -139,6 +139,9 @@
     <Compile Update="Views\GraphicsPage.xaml.cs">
       <DependentUpon>GraphicsPage.xaml</DependentUpon>
     </Compile>
+    <Compile Update="Views\MultiBindingPage.xaml.cs">
+      <DependentUpon>MultiBindingPage.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
 
   <ItemGroup>
@@ -151,7 +154,7 @@
     <MauiXaml Update="Views\EventsPage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </MauiXaml>
-    <MauiXaml Update="Views\MultiBinding.xaml">
+    <MauiXaml Update="Views\MultiBindingPage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </MauiXaml>
     <MauiXaml Update="Views\GraphicsPage.xaml">

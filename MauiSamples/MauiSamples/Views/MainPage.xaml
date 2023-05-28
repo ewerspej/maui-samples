@@ -115,6 +115,10 @@
           Text="To GraphicsPage"
           Clicked="OnGraphicsPageButtonClicked" />
 
+        <Button
+          Text="To MultiBinding!"
+          Clicked="OnMultiBindingPageButtonClicked"/>
+
       </VerticalStackLayout>
     </ScrollView>
   </Grid>
