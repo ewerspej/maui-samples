@@ -1,4 +1,5 @@
-﻿using MauiSamples.ViewModels;
+﻿using MauiSamples.Models;
+using MauiSamples.ViewModels;
 using MauiSamples.Views.Platform;
 
 namespace MauiSamples.Views;
@@ -54,5 +55,19 @@ public partial class MainPage
     private async void OnMultiBindingPageButtonClicked(object sender, EventArgs e)
     {
         await Shell.Current.GoToAsync(nameof(MultiBindingPage));
+    }
+
+    private async void OnPassPersonButtonClicked(object sender, EventArgs e)
+    {
+        await Shell.Current.GoToAsync($"{nameof(PassObjectsPage)}?Name={"John"}&Age={59}&IsMarried={true}", parameters: new Dictionary<string, object>
+        {
+            {"Somebody", new Person
+            {
+                FirstName = "John",
+                LastName = "Jones",
+                Age = 66,
+                IsMarried = true
+            }}
+        });
     }
 }

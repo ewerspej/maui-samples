@@ -119,6 +119,10 @@
           Text="To MultiBinding!"
           Clicked="OnMultiBindingPageButtonClicked"/>
 
+        <Button
+          Text="Pass Person Object"
+          Clicked="OnPassPersonButtonClicked"/>
+
       </VerticalStackLayout>
     </ScrollView>
   </Grid>

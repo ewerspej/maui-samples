@@ -160,6 +160,9 @@
     <MauiXaml Update="Views\GraphicsPage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </MauiXaml>
+    <MauiXaml Update="Views\PassObjectsPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </MauiXaml>
     <MauiXaml Update="Views\Platform\HelloFromAndroid.xaml">
       <Generator>MSBuild:Compile</Generator>
     </MauiXaml>

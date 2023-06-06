@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModels="clr-namespace:MauiSamples.ViewModels"
+             x:Class="MauiSamples.Views.PassObjectsPage"
+             Title="PassObjectsPage"
+             x:DataType="viewModels:PassObjectsViewModel">
+    <VerticalStackLayout>
+      <Label Text="{Binding Name}" />
+      <Label Text="{Binding Age}" />
+      <Label Text="{Binding IsMarried}" />
+      <BoxView HeightRequest="1" BackgroundColor="Red" />
+      <Label Text="{Binding Somebody.FirstName}" />
+      <Label Text="{Binding Somebody.LastName}" />
+      <Label Text="{Binding Somebody.Age}" />
+      <Label Text="{Binding Somebody.IsMarried}" />
+  </VerticalStackLayout>
+</ContentPage>

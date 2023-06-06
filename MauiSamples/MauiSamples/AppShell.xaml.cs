@@ -9,5 +9,6 @@ public partial class AppShell : Shell
         InitializeComponent();
 
         Routing.RegisterRoute(nameof(MultiBindingPage), typeof(MultiBindingPage));
+        Routing.RegisterRoute(nameof(PassObjectsPage), typeof(PassObjectsPage));
     }
 }
