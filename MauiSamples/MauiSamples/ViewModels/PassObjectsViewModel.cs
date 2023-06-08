@@ -12,10 +12,10 @@ public partial class PassObjectsViewModel : ObservableObject, IQueryAttributable
     private Person _somebody;
 
     [ObservableProperty]
-    private string name;
+    private string _name;
 
     [ObservableProperty]
-    private int age;
+    private int _age;
 
     [ObservableProperty]
     private bool _isMarried;
