@@ -189,4 +189,8 @@
     </MauiXaml>
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Services\Audio\" />
+  </ItemGroup>
+
 </Project>

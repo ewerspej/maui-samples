@@ -1,4 +1,6 @@
 ﻿using CommunityToolkit.Maui;
+using MauiSamples.Services;
+using MauiSamples.Services.Audio;
 using MauiSamples.Services.Device;
 using MauiSamples.Services.Device.Platform;
 using MauiSamples.ViewModels;
@@ -32,11 +34,16 @@ public static class MauiProgram
 #endif
 
         builder.Services.AddSingleton<IDeviceService>(DeviceService.Instance);
+        builder.Services.AddSingleton<IAudioService, AudioService>();
         builder.Services.AddSingleton<MainViewModel>();
         builder.Services.AddSingleton<MainPage>();
         builder.Services.AddTransient<BindingsViewModel>();
         builder.Services.AddTransient<BindingsPage>();
 
-        return builder.Build();
+        var app = builder.Build();
+
+        ServiceHelper.Initialize(app.Services);
+
+        return app;
     }
 }
