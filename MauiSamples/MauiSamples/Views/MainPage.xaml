@@ -72,6 +72,8 @@
         <Label
           FontSize="Title"
           HorizontalOptions="Center"
+          Text="{Binding Path=Theme.DisplayName, Source={x:Static settings:SettingsService.Instance}, StringFormat='Hello, {0}!'}"
+          FontFamily="{OnPlatform iOS='.SFUI-Semibold', Android='sans-serif-medium'}"
           Style="{DynamicResource LabelStyle}" />
 
         <HorizontalStackLayout
