@@ -1,4 +1,5 @@
 ﻿using CommunityToolkit.Maui;
+using Maui.FixesAndWorkarounds;
 using MauiSamples.Services;
 using MauiSamples.Services.Audio;
 using MauiSamples.Services.Device;
@@ -20,6 +21,7 @@ public static class MauiProgram
             .UseMauiCommunityToolkit()
             .UseMauiCommunityToolkitMediaElement()
             .ConfigureMopups()
+            .ConfigureMauiWorkarounds()
             .ConfigureFonts(fonts =>
             {
                 fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
