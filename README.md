@@ -15,10 +15,13 @@ This is a sample repository to demonstrate and experiment with various C# .NET a
 - [x] Device Orientation (Portrait/Landscape)
 - [x] Custom TitleView
 - [x] Dependency Injection using Shell
-- [ ] Fullscreen / Immersive Mode
+- [ ] Foreground Services
+- [ ] File Download
+- [ ] App Directories
 - [ ] Localization
 - [ ] Unit Tests
-- [ ] Guard Clauses
+- [ ] Guard Clauses / Input Validation
+- [ ] Fullscreen / Immersive Mode
 - [ ] Status Bar Themes (Android)
 - [ ] App Preferences
 - [ ] Background Services
