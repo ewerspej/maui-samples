@@ -61,13 +61,16 @@ public partial class MainPage
     {
         await Shell.Current.GoToAsync($"{nameof(PassObjectsPage)}?Name={"John"}&Age={59}&IsMarried={true}", parameters: new Dictionary<string, object>
         {
-            {"Somebody", new Person
             {
-                FirstName = "John",
-                LastName = "Jones",
-                Age = 66,
-                IsMarried = true
-            }}
+                "Somebody",
+                new Person
+                {
+                    FirstName = "John",
+                    LastName = "Jones",
+                    Age = 66,
+                    IsMarried = true
+                }
+            }
         });
     }
 }

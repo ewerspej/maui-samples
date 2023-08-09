@@ -128,6 +128,7 @@
     <PackageReference Include="CommunityToolkit.Maui" Version="3.1.0" />
     <PackageReference Include="CommunityToolkit.Maui.MediaElement" Version="1.0.2" />
     <PackageReference Include="CommunityToolkit.Mvvm" Version="8.1.0-preview2" />
+    <PackageReference Include="epj.Expander.Maui" Version="1.0.2" />
     <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="6.0.0" />
     <PackageReference Include="Mopups" Version="1.1.0" />
     <PackageReference Include="PureWeen.Maui.FixesAndWorkarounds" Version="1.4.9" />

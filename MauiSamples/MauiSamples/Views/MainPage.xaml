@@ -7,6 +7,7 @@
   xmlns:settings="clr-namespace:MauiSamples.Services.Settings"
   xmlns:viewModels="clr-namespace:MauiSamples.ViewModels"
   xmlns:custom="clr-namespace:MauiSamples.Views.Custom"
+  xmlns:maui="clr-namespace:epj.Expander.Maui;assembly=epj.Expander.Maui"
   x:DataType="viewModels:MainViewModel"
   Shell.BackgroundColor="DarkGreen"
   Shell.ForegroundColor="White">
@@ -61,72 +62,116 @@
       Text="Item 4" />
   </ContentPage.ToolbarItems>
 
-  <Grid>
-    <ScrollView>
-      <VerticalStackLayout
-        Margin="0,50,0,0"
-        Padding="30,0"
-        Spacing="25"
-        VerticalOptions="Start">
+  <ScrollView>
+    <VerticalStackLayout
+      Margin="0,50,0,0"
+      Padding="30,0"
+      Spacing="18"
+      VerticalOptions="Start">
+
+      <Label
+        FontSize="Title"
+        HorizontalOptions="Center"
+        Text="{Binding Path=Theme.DisplayName, Source={x:Static settings:SettingsService.Instance}, StringFormat='Hello, {0}!'}"
+        FontFamily="{OnPlatform iOS='.SFUI-Semibold',
+                                Android='sans-serif-medium'}"
+        Style="{DynamicResource LabelStyle}" />
+
+      <HorizontalStackLayout
+        HorizontalOptions="Center"
+        VerticalOptions="Center">
 
         <Label
-          FontSize="Title"
-          HorizontalOptions="Center"
-          Text="{Binding Path=Theme.DisplayName, Source={x:Static settings:SettingsService.Instance}, StringFormat='Hello, {0}!'}"
-          FontFamily="{OnPlatform iOS='.SFUI-Semibold', Android='sans-serif-medium'}"
-          Style="{DynamicResource LabelStyle}" />
+          Text="Select Theme: "
+          VerticalOptions="Center" />
 
-        <HorizontalStackLayout
-          HorizontalOptions="Center"
-          VerticalOptions="Center">
+        <!-- Note: We are binding to the SettingsService and the DisplayName of the Theme -->
+        <Picker
+          x:DataType="{x:Null}"
+          BindingContext="{Binding Source={x:Static models:Theme.AvailableThemes}}"
+          ItemDisplayBinding="{Binding DisplayName}"
+          ItemsSource="{Binding Source={x:Static models:Theme.AvailableThemes}}"
+          SelectedItem="{Binding Path=Theme, Source={x:Static settings:SettingsService.Instance}}"
+          VerticalOptions="Center" />
+      </HorizontalStackLayout>
 
-          <Label
-            Text="Select Theme: "
-            VerticalOptions="Center" />
+      <custom:CustomLabel Text="This is a CustomLabel that changes its Color based on the AppTheme" />
 
-          <!-- Note: We are binding to the SettingsService and the DisplayName of the Theme -->
-          <Picker
-            x:DataType="{x:Null}"
-            BindingContext="{Binding Source={x:Static models:Theme.AvailableThemes}}"
-            ItemDisplayBinding="{Binding DisplayName}"
-            ItemsSource="{Binding Source={x:Static models:Theme.AvailableThemes}}"
-            SelectedItem="{Binding Path=Theme, Source={x:Static settings:SettingsService.Instance}}"
-            VerticalOptions="Center" />
-        </HorizontalStackLayout>
+      <custom:CustomLabel
+        TextColor="Orange"
+        Text="This is a CustomLabel that overrides the Color value" />
 
-        <custom:CustomLabel 
-          Text="This is a CustomLabel that changes its Color based on the AppTheme"/>
+      <maui:Expander Animated="True">
+        <maui:Expander.HeaderContent>
+          <Grid
+            HeightRequest="80"
+            HorizontalOptions="Fill"
+            BackgroundColor="LightBlue">
+            <Label
+              VerticalOptions="Center"
+              HorizontalOptions="Center"
+              Text="Platform-specific Dialogs and Views"
+              TextColor="Black"/>
+          </Grid>
+        </maui:Expander.HeaderContent>
+        <VerticalStackLayout
+          Padding="6"
+          Spacing="6"
+          BackgroundColor="LightBlue">
+          <Button
+            BackgroundColor="{AppThemeBinding Light='White', Dark='DarkSlateGray'}"
+            TextColor="{AppThemeBinding Light='DarkBlue', Dark='White'}"
+            Pressed="SayHello"
+            Text="Say Hello" />
+          <Button
+            BackgroundColor="{AppThemeBinding Light='White', Dark='DarkSlateGray'}"
+            TextColor="{AppThemeBinding Light='DarkBlue', Dark='White'}"
+            Pressed="OpenHelloView"
+            Text="Hello from Platform" />
+          <Button
+            BackgroundColor="{AppThemeBinding Light='White', Dark='DarkSlateGray'}"
+            TextColor="{AppThemeBinding Light='DarkBlue', Dark='White'}"
+            Pressed="OpenWithPlatformView"
+            Text="Hello with Platform View" />
+        </VerticalStackLayout>
+      </maui:Expander>
 
-        <custom:CustomLabel 
-          TextColor="Orange"
-          Text="This is a CustomLabel that overrides the Color value"/>
+      <maui:Expander Animated="True">
+        <maui:Expander.HeaderContent>
+          <Grid
+            HeightRequest="80"
+            HorizontalOptions="Fill"
+            BackgroundColor="LightSeaGreen">
+            <Label
+              VerticalOptions="Center"
+              HorizontalOptions="Center"
+              Text="Graphics, Binding and Navigation"
+              TextColor="Black"/>
+          </Grid>
+        </maui:Expander.HeaderContent>
+        <VerticalStackLayout
+          Padding="6"
+          Spacing="6"
+          BackgroundColor="LightSeaGreen">
+          <Button
+            BackgroundColor="{AppThemeBinding Light='White', Dark='DarkSlateGray'}"
+            TextColor="{AppThemeBinding Light='DarkBlue', Dark='White'}"
+            Text="To GraphicsPage"
+            Clicked="OnGraphicsPageButtonClicked" />
+          <Button
+            BackgroundColor="{AppThemeBinding Light='White', Dark='DarkSlateGray'}"
+            TextColor="{AppThemeBinding Light='DarkBlue', Dark='White'}"
+            Text="To MultiBinding!"
+            Clicked="OnMultiBindingPageButtonClicked" />
+          <Button
+            BackgroundColor="{AppThemeBinding Light='White', Dark='DarkSlateGray'}"
+            TextColor="{AppThemeBinding Light='DarkBlue', Dark='White'}"
+            Text="Pass Person Object"
+            Clicked="OnPassPersonButtonClicked" />
+        </VerticalStackLayout>
+      </maui:Expander>
 
-        <Button
-          Pressed="SayHello"
-          Text="Say Hello" />
-
-        <Button
-          Pressed="OpenHelloView"
-          Text="Hello from Platform" />
-
-        <Button
-          Pressed="OpenWithPlatformView"
-          Text="Hello with Platform View" />
-
-        <Button
-          Text="To GraphicsPage"
-          Clicked="OnGraphicsPageButtonClicked" />
-
-        <Button
-          Text="To MultiBinding!"
-          Clicked="OnMultiBindingPageButtonClicked"/>
-
-        <Button
-          Text="Pass Person Object"
-          Clicked="OnPassPersonButtonClicked"/>
-
-      </VerticalStackLayout>
-    </ScrollView>
-  </Grid>
+    </VerticalStackLayout>
+  </ScrollView>
 
 </ContentPage>

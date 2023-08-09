@@ -1,4 +1,5 @@
 ﻿using CommunityToolkit.Maui;
+using epj.Expander.Maui;
 using Maui.FixesAndWorkarounds;
 using MauiSamples.Services;
 using MauiSamples.Services.Audio;
@@ -45,6 +46,7 @@ public static class MauiProgram
         var app = builder.Build();
 
         ServiceHelper.Initialize(app.Services);
+        Expander.EnableAnimations();
 
         return app;
     }
