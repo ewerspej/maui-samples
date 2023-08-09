@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+  xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+  xmlns:maui="clr-namespace:epj.Expander.Maui;assembly=epj.Expander.Maui"
+  xmlns:models="clr-namespace:MauiSamples.Models"
+  xmlns:viewModels="clr-namespace:MauiSamples.ViewModels"
+  x:Class="MauiSamples.Views.Accordion.AccordionMvvmPage"
+  x:DataType="viewModels:AccordionViewModel"
+  Title="AccordionTwoPage">
+
+  <VerticalStackLayout
+    Spacing="6"
+    BindableLayout.ItemsSource="{Binding Items}">
+    <BindableLayout.ItemTemplate>
+      <DataTemplate x:DataType="models:AccordionItem">
+        <maui:Expander
+          Animated="True"
+          Command="{Binding SelectItemCommand, Source={RelativeSource AncestorType={x:Type viewModels:AccordionViewModel}}}"
+          CommandParameter="{Binding .}"
+          IsExpanded="{Binding Selected}">
+          <maui:Expander.HeaderContent>
+            <Grid
+              Padding="16,8"
+              HeightRequest="80"
+              HorizontalOptions="Fill"
+              BackgroundColor="DarkSlateGray">
+              <Label
+                VerticalOptions="Center"
+                HorizontalOptions="Center"
+                Text="{Binding Name}"
+                TextColor="White" />
+            </Grid>
+          </maui:Expander.HeaderContent>
+          <Grid
+            HeightRequest="250"
+            BackgroundColor="LightBlue">
+            <Label
+              VerticalOptions="Center"
+              HorizontalOptions="Center"
+              TextColor="Black"
+              Text="{Binding Description}" />
+          </Grid>
+        </maui:Expander>
+      </DataTemplate>
+    </BindableLayout.ItemTemplate>
+  </VerticalStackLayout>
+
+</ContentPage>

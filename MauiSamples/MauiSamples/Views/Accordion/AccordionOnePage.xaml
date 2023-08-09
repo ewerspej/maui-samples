@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+  xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+  xmlns:maui="clr-namespace:epj.Expander.Maui;assembly=epj.Expander.Maui"
+  x:Class="MauiSamples.Views.Accordion.AccordionOnePage"
+  Title="AccordionOnePage">
+
+  <VerticalStackLayout
+    Spacing="6"
+    x:Name="AccordionLayout">
+    <maui:Expander HeaderTapped="Expander_OnHeaderTapped">
+      <maui:Expander.HeaderContent>
+        <Grid
+          Padding="16,8"
+          HeightRequest="80"
+          HorizontalOptions="Fill"
+          BackgroundColor="DarkSlateGray">
+          <Label
+            VerticalOptions="Center"
+            HorizontalOptions="Center"
+            Text="Expander One"
+            TextColor="White" />
+        </Grid>
+      </maui:Expander.HeaderContent>
+      <Grid
+        HeightRequest="250"
+        BackgroundColor="LightBlue">
+        <Label
+          VerticalOptions="Center"
+          HorizontalOptions="Center"
+          TextColor="Black"
+          Text="Expander One Content" />
+      </Grid>
+    </maui:Expander>
+    <maui:Expander HeaderTapped="Expander_OnHeaderTapped">
+      <maui:Expander.HeaderContent>
+        <Grid
+          Padding="16,8"
+          HeightRequest="80"
+          HorizontalOptions="Fill"
+          BackgroundColor="DarkSlateGray">
+          <Label
+            VerticalOptions="Center"
+            HorizontalOptions="Center"
+            Text="Expander Two"
+            TextColor="White" />
+        </Grid>
+      </maui:Expander.HeaderContent>
+      <Grid
+        HeightRequest="250"
+        BackgroundColor="LightBlue">
+        <Label
+          VerticalOptions="Center"
+          HorizontalOptions="Center"
+          TextColor="Black"
+          Text="Expander Two Content" />
+      </Grid>
+    </maui:Expander>
+    <maui:Expander HeaderTapped="Expander_OnHeaderTapped">
+      <maui:Expander.HeaderContent>
+        <Grid
+          Padding="16,8"
+          HeightRequest="80"
+          HorizontalOptions="Fill"
+          BackgroundColor="DarkSlateGray">
+          <Label
+            VerticalOptions="Center"
+            HorizontalOptions="Center"
+            Text="Expander Three"
+            TextColor="White" />
+        </Grid>
+      </maui:Expander.HeaderContent>
+      <Grid
+        HeightRequest="250"
+        BackgroundColor="LightBlue">
+        <Label
+          VerticalOptions="Center"
+          HorizontalOptions="Center"
+          TextColor="Black"
+          Text="Expander Three Content" />
+      </Grid>
+    </maui:Expander>
+  </VerticalStackLayout>
+
+</ContentPage>

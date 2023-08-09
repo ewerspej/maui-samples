@@ -135,6 +135,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="Views\Accordion\AccordionMvvmPage.xaml.cs">
+      <DependentUpon>AccordionMvvmPage.xaml</DependentUpon>
+    </Compile>
     <Compile Update="Views\AddressPage.xaml.cs">
       <DependentUpon>AddressPage.xaml</DependentUpon>
     </Compile>
@@ -147,6 +150,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <MauiXaml Update="Views\Accordion\AccordionOnePage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </MauiXaml>
+    <MauiXaml Update="Views\Accordion\AccordionMvvmPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </MauiXaml>
     <MauiXaml Update="Views\BindingsPage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </MauiXaml>

@@ -29,7 +29,7 @@
       <ShellContent
         Title="Video"
         ContentTemplate="{DataTemplate views:VideoPage}"
-        Route="Video"/>
+        Route="Video" />
     </Tab>
     <Tab Title="Events">
       <ShellContent
@@ -37,13 +37,6 @@
         ContentTemplate="{DataTemplate views:EventsPage}"
         Route="Event" />
     </Tab>
-    <!--<Tab Title="MultiBinding">
-      <ShellContent
-        Title="MultiBinding"
-        ContentTemplate="{DataTemplate views:MultiBinding}"
-        Route="MultiBinding"/>
-    </Tab>-->
   </TabBar>
-
 
 </Shell>

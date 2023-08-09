@@ -104,6 +104,7 @@
       <maui:Expander Animated="True">
         <maui:Expander.HeaderContent>
           <Grid
+            Padding="16,8"
             HeightRequest="80"
             HorizontalOptions="Fill"
             BackgroundColor="LightBlue">
@@ -119,18 +120,12 @@
           Spacing="6"
           BackgroundColor="LightBlue">
           <Button
-            BackgroundColor="{AppThemeBinding Light='White', Dark='DarkSlateGray'}"
-            TextColor="{AppThemeBinding Light='DarkBlue', Dark='White'}"
             Pressed="SayHello"
             Text="Say Hello" />
           <Button
-            BackgroundColor="{AppThemeBinding Light='White', Dark='DarkSlateGray'}"
-            TextColor="{AppThemeBinding Light='DarkBlue', Dark='White'}"
             Pressed="OpenHelloView"
             Text="Hello from Platform" />
           <Button
-            BackgroundColor="{AppThemeBinding Light='White', Dark='DarkSlateGray'}"
-            TextColor="{AppThemeBinding Light='DarkBlue', Dark='White'}"
             Pressed="OpenWithPlatformView"
             Text="Hello with Platform View" />
         </VerticalStackLayout>
@@ -139,6 +134,7 @@
       <maui:Expander Animated="True">
         <maui:Expander.HeaderContent>
           <Grid
+            Padding="16,8"
             HeightRequest="80"
             HorizontalOptions="Fill"
             BackgroundColor="LightSeaGreen">
@@ -154,20 +150,41 @@
           Spacing="6"
           BackgroundColor="LightSeaGreen">
           <Button
-            BackgroundColor="{AppThemeBinding Light='White', Dark='DarkSlateGray'}"
-            TextColor="{AppThemeBinding Light='DarkBlue', Dark='White'}"
             Text="To GraphicsPage"
             Clicked="OnGraphicsPageButtonClicked" />
           <Button
-            BackgroundColor="{AppThemeBinding Light='White', Dark='DarkSlateGray'}"
-            TextColor="{AppThemeBinding Light='DarkBlue', Dark='White'}"
             Text="To MultiBinding!"
             Clicked="OnMultiBindingPageButtonClicked" />
           <Button
-            BackgroundColor="{AppThemeBinding Light='White', Dark='DarkSlateGray'}"
-            TextColor="{AppThemeBinding Light='DarkBlue', Dark='White'}"
             Text="Pass Person Object"
             Clicked="OnPassPersonButtonClicked" />
+        </VerticalStackLayout>
+      </maui:Expander>
+
+      <maui:Expander Animated="True">
+        <maui:Expander.HeaderContent>
+          <Grid
+            Padding="16,8"
+            HeightRequest="80"
+            HorizontalOptions="Fill"
+            BackgroundColor="LightBlue">
+            <Label
+              VerticalOptions="Center"
+              HorizontalOptions="Center"
+              Text="Expander Madness!"
+              TextColor="Black"/>
+          </Grid>
+        </maui:Expander.HeaderContent>
+        <VerticalStackLayout
+          Padding="6"
+          Spacing="6"
+          BackgroundColor="LightBlue">
+          <Button
+            Pressed="OnAccordionOneButtonPressed"
+            Text="Accordion #1" />
+          <Button
+            Pressed="OnAccordionTwoButtonPressed"
+            Text="Accordion #2" />
         </VerticalStackLayout>
       </maui:Expander>
 

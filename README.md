@@ -15,6 +15,7 @@ This is a sample repository to demonstrate and experiment with various C# .NET a
 - [x] Device Orientation (Portrait/Landscape)
 - [x] Custom TitleView
 - [x] Dependency Injection using Shell
+- [x] Expander & Accordion
 - [ ] Foreground Services
 - [ ] File Download
 - [ ] App Directories

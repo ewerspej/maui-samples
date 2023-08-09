@@ -1,5 +1,6 @@
 ﻿using MauiSamples.Models;
 using MauiSamples.ViewModels;
+using MauiSamples.Views.Accordion;
 using MauiSamples.Views.Platform;
 
 namespace MauiSamples.Views;
@@ -72,5 +73,15 @@ public partial class MainPage
                 }
             }
         });
+    }
+
+    private async void OnAccordionOneButtonPressed(object sender, EventArgs e)
+    {
+        await Shell.Current.GoToAsync(nameof(AccordionOnePage));
+    }
+
+    private async void OnAccordionTwoButtonPressed(object sender, EventArgs e)
+    {
+        await Shell.Current.GoToAsync(nameof(AccordionMvvmPage));
     }
 }
