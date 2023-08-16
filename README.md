@@ -1,5 +1,5 @@
 # .NET and MAUI samples
-This is a sample repository to demonstrate and experiment with various C# .NET and MAUI features, many of which will also be covered in my blog: https://ewerspej.hashnode.dev/
+This is a sample repository to demonstrate and experiment with various C# .NET and MAUI features, many of which will also be covered in my blog: https://blog.ewers-peters.de
 
 ## Features currently being explored ##
 
