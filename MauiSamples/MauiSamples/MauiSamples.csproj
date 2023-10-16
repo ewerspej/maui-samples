@@ -177,7 +177,13 @@
     <MauiXaml Update="Views\Platform\Android\HelloFromAndroid.xaml">
       <Generator>MSBuild:Compile</Generator>
     </MauiXaml>
+    <MauiXaml Update="Views\Platform\Android\ImageViewAndroid.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </MauiXaml>
     <MauiXaml Update="Views\Platform\iOS\HelloFromiOS.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </MauiXaml>
+    <MauiXaml Update="Views\Platform\iOS\ImageViewiOS.xaml">
       <Generator>MSBuild:Compile</Generator>
     </MauiXaml>
     <MauiXaml Update="Views\Platform\Other\HelloFromOther.xaml">

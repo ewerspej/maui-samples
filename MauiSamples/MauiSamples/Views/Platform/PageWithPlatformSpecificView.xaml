@@ -2,18 +2,30 @@
 <ContentPage
   xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
   xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+  xmlns:android="clr-namespace:MauiSamples.Views.Platform.Android"
+  xmlns:iOs="clr-namespace:MauiSamples.Views.Platform.iOS"
   x:Class="MauiSamples.Views.Platform.PageWithPlatformSpecificView"
   Title="PageWithPlatformSpecificView">
 
-  <Grid RowDefinitions="*,*">
+  <Grid RowDefinitions="*,4*">
 
     <VerticalStackLayout
       Grid.Row="0"
       x:Name="VerticalLayout" />
 
-    
+    <ContentView
+      Grid.Row="1"
+      Padding="20">
+      <OnPlatform x:TypeArguments="View">
+        <On Platform="Android">
+          <android:ImageViewAndroid />
+        </On>
+        <On Platform="iOS">
+          <iOs:ImageViewiOS />
+        </On>
+      </OnPlatform>
+    </ContentView>
 
   </Grid>
-
 
 </ContentPage>
