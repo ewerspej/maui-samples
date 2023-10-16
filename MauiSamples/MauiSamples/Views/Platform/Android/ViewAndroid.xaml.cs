@@ -1,4 +1,4 @@
-namespace MauiSamples.Views.Platform;
+namespace MauiSamples.Views.Platform.Android;
 
 public partial class ViewAndroid : ContentView
 {

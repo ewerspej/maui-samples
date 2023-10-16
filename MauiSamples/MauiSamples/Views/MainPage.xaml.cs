@@ -24,22 +24,26 @@ public partial class MainPage
     {
         //Conditional compilation approach (preferred)
 #if ANDROID
-        await Navigation.PushAsync(new HelloFromAndroid());
+        await Navigation.PushAsync(new Platform.Android.HelloFromAndroid());
 #elif IOS
-        await Navigation.PushAsync(new HelloFromiOS());
+        await Navigation.PushAsync(new Platform.iOS.HelloFromiOS());
 #else
-        await Navigation.PushAsync(new HelloFromOther());
+        await Navigation.PushAsync(new Platform.Other.HelloFromOther());
 #endif
 
         //Runtime approach
         //if (DeviceInfo.Platform == DevicePlatform.Android)
         //{
-        //    await Navigation.PushAsync(new HelloFromAndroid());
+        //    await Navigation.PushAsync(new Platform.Android.HelloFromAndroid());
         //}
         //
-        //if (DeviceInfo.Platform == DevicePlatform.iOS)
+        //else if (DeviceInfo.Platform == DevicePlatform.iOS)
         //{
-        //    await Navigation.PushAsync(new HelloFromiOS());
+        //    await Navigation.PushAsync(new Platform.iOS.HelloFromiOS());
+        //}
+        //else
+        //{
+        //    await Navigation.PushAsync(new Platform.Other.HelloFromOther());
         //}
     }
 

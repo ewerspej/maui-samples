@@ -174,22 +174,22 @@
     <MauiXaml Update="Views\PassObjectsPage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </MauiXaml>
-    <MauiXaml Update="Views\Platform\HelloFromAndroid.xaml">
+    <MauiXaml Update="Views\Platform\Android\HelloFromAndroid.xaml">
       <Generator>MSBuild:Compile</Generator>
     </MauiXaml>
-    <MauiXaml Update="Views\Platform\HelloFromiOS.xaml">
+    <MauiXaml Update="Views\Platform\iOS\HelloFromiOS.xaml">
       <Generator>MSBuild:Compile</Generator>
     </MauiXaml>
-    <MauiXaml Update="Views\Platform\HelloFromOther.xaml">
+    <MauiXaml Update="Views\Platform\Other\HelloFromOther.xaml">
       <Generator>MSBuild:Compile</Generator>
     </MauiXaml>
     <MauiXaml Update="Views\Platform\PageWithPlatformSpecificView.xaml">
       <Generator>MSBuild:Compile</Generator>
     </MauiXaml>
-    <MauiXaml Update="Views\Platform\ViewAndroid.xaml">
+    <MauiXaml Update="Views\Platform\Android\ViewAndroid.xaml">
       <Generator>MSBuild:Compile</Generator>
     </MauiXaml>
-    <MauiXaml Update="Views\Platform\ViewiOS.xaml">
+    <MauiXaml Update="Views\Platform\iOS\ViewiOS.xaml">
       <Generator>MSBuild:Compile</Generator>
     </MauiXaml>
     <MauiXaml Update="Views\Popups\AddressPopup.xaml">

@@ -8,9 +8,23 @@ public partial class PageWithPlatformSpecificView : ContentPage
 
         //Conditional compilation approach
 #if ANDROID
-		VerticalLayout.Add(new ViewAndroid());
+		VerticalLayout.Add(new Android.ViewAndroid());
 #elif IOS
-        VerticalLayout.Add(new ViewiOS());
+        VerticalLayout.Add(new iOS.ViewiOS());
+#else
+        var contentView = new ContentView
+        {
+            VerticalOptions = LayoutOptions.Start,
+            HorizontalOptions = LayoutOptions.Fill,
+            Padding = new Thickness(10.0)
+        };
+        var label = new Label
+        {
+            Text = "This is neither Android nor iOS",
+            HorizontalOptions = LayoutOptions.Center
+        };
+        contentView.Content = label;
+        VerticalLayout.Add(contentView);
 #endif
 
         //Runtime approach

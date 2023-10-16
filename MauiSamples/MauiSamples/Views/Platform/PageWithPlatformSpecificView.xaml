@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MauiSamples.Views.Platform.PageWithPlatformSpecificView"
-             Title="PageWithPlatformSpecificView">
-    <VerticalStackLayout x:Name="VerticalLayout" />
+<ContentPage
+  xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+  x:Class="MauiSamples.Views.Platform.PageWithPlatformSpecificView"
+  Title="PageWithPlatformSpecificView">
+
+  <Grid RowDefinitions="*,*">
+
+    <VerticalStackLayout
+      Grid.Row="0"
+      x:Name="VerticalLayout" />
+
+    
+
+  </Grid>
+
+
 </ContentPage>
