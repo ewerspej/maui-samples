@@ -36,7 +36,6 @@ public partial class MainPage
         //{
         //    await Navigation.PushAsync(new Platform.Android.HelloFromAndroid());
         //}
-        //
         //else if (DeviceInfo.Platform == DevicePlatform.iOS)
         //{
         //    await Navigation.PushAsync(new Platform.iOS.HelloFromiOS());

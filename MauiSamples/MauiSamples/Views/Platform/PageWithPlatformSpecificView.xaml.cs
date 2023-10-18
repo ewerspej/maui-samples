@@ -30,12 +30,27 @@ public partial class PageWithPlatformSpecificView : ContentPage
         //Runtime approach
         //if (DeviceInfo.Platform == DevicePlatform.Android)
         //{
-        //    VerticalLayout.Add(new ViewAndroid());
+        //    VerticalLayout.Add(new Android.ViewAndroid());
         //}
-        //
-        //if (DeviceInfo.Platform == DevicePlatform.iOS)
+        //else if (DeviceInfo.Platform == DevicePlatform.iOS)
         //{
-        //    VerticalLayout.Add(new ViewiOS());
+        //    VerticalLayout.Add(new iOS.ViewiOS());
+        //}
+        //else
+        //{
+        //    var contentView = new ContentView
+        //    {
+        //        VerticalOptions = LayoutOptions.Start,
+        //        HorizontalOptions = LayoutOptions.Fill,
+        //        Padding = new Thickness(10.0)
+        //    };
+        //    var label = new Label
+        //    {
+        //        Text = "This is neither Android nor iOS",
+        //        HorizontalOptions = LayoutOptions.Center
+        //    };
+        //    contentView.Content = label;
+        //    VerticalLayout.Add(contentView);
         //}
     }
 }
