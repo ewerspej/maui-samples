@@ -3,19 +3,20 @@ This is a sample repository to demonstrate and experiment with various C# .NET a
 
 ## Features currently being explored ##
 
-- [x] App Themes (Dark/Light mode)
-- [x] Splash Screen (incl. platform differences)
-- [x] Built-in Multi-Targeting
-- [x] Advanced Multi-Targeting
-- [x] Platform specific APIs
-- [x] MVVM Code Generation (simple scenarios)
-- [x] MVVM Code Generation (advanced scenarios)
+- [x] App Themes (Dark/Light mode): [Blog Post](https://blog.ewers-peters.de/implement-dark-mode-in-net-maui)
+- [x] Splash Screen (incl. platform differences): [Blog Post](https://blog.ewers-peters.de/lets-customize-the-splash-screen-of-a-maui-app)
+- [x] Built-in Multi-Targeting: [Blog Post](https://blog.ewers-peters.de/multi-targeting-in-net-maui-part-1)
+- [x] Advanced Multi-Targeting: [Blog Post](https://blog.ewers-peters.de/multi-targeting-in-net-maui-part-2)
+- [x] Platform-specific APIs: [Blog Post 1](https://blog.ewers-peters.de/multi-targeting-in-net-maui-part-1), [Blog Post 2](https://blog.ewers-peters.de/multi-targeting-in-net-maui-part-2)
+- [x] Platform-specific XAML: [Blog Post](https://blog.ewers-peters.de/platform-specific-xaml-in-net-maui)
+- [x] MVVM Code Generation (simple scenarios): [Blog Post](https://blog.ewers-peters.de/introduction-to-mvvm-source-generators-for-dotnet)
+- [x] MVVM Code Generation (advanced scenarios): [Blog Post 1](https://blog.ewers-peters.de/mvvm-source-generators-advanced-scenarios), [Blog Post 2](https://blog.ewers-peters.de/easily-control-the-executability-of-commands-using-mvvm-source-generators)
 - [x] Events and Behaviors (e.g. EventToCommandBehavior)
-- [x] Compiled Bindings
-- [x] Device Orientation (Portrait/Landscape)
-- [x] Custom TitleView
-- [x] Dependency Injection using Shell
-- [x] Expander & Accordion
+- [x] Compiled Bindings: [Blog Post](https://blog.ewers-peters.de/a-quick-introduction-to-compiled-bindings)
+- [x] Device Orientation (Portrait/Landscape) and Responsive Design: [Blog Post](https://blog.ewers-peters.de/add-responsive-layouts-to-your-maui-app)
+- [x] Custom TitleView: [Blog Post](https://blog.ewers-peters.de/customize-the-title-bar-of-a-maui-app-with-these-simple-steps)
+- [x] Dependency Injection using Shell: [Blog Post](https://blog.ewers-peters.de/are-you-using-dependency-injection-in-your-net-maui-app-yet)
+- [x] Expander & Accordion: [Blog Post](https://blog.ewers-peters.de/three-ways-to-implement-an-accordion-control)
 - [ ] Foreground Services
 - [ ] File Download
 - [ ] App Directories
