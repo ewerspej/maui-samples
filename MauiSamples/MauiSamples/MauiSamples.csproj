@@ -1,11 +1,11 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>net7.0;net7.0-android;net7.0-ios;net7.0-maccatalyst</TargetFrameworks>
-    <TargetFrameworks Condition="$([MSBuild]::IsOSPlatform('windows'))">$(TargetFrameworks);net7.0-windows10.0.19041.0</TargetFrameworks>
+    <TargetFrameworks>net8.0;net8.0-android;net8.0-ios;net8.0-maccatalyst</TargetFrameworks>
+    <TargetFrameworks Condition="$([MSBuild]::IsOSPlatform('windows'))">$(TargetFrameworks);net8.0-windows10.0.19041.0</TargetFrameworks>
     <!-- Uncomment to also build the tizen app. You will need to install tizen by following this: https://github.com/Samsung/Tizen.NET -->
-    <!-- <TargetFrameworks>$(TargetFrameworks);net7.0-tizen</TargetFrameworks> -->
-    <OutputType Condition="'$(TargetFramework)' != 'net7.0'">Exe</OutputType>
+    <!-- <TargetFrameworks>$(TargetFrameworks);net8.0-tizen</TargetFrameworks> -->
+    <OutputType Condition="'$(TargetFramework)' != 'net8.0'">Exe</OutputType>
     <RootNamespace>MauiSamples</RootNamespace>
     <UseMaui>true</UseMaui>
     <SingleProject>true</SingleProject>
@@ -30,7 +30,7 @@
     <SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'tizen'">6.5</SupportedOSPlatformVersion>
   </PropertyGroup>
 
-  <PropertyGroup Condition="'$(TargetFramework)'=='net7.0-ios'">
+  <PropertyGroup Condition="'$(TargetFramework)'=='net8.0-ios'">
     <ProvisioningType>manual</ProvisioningType>
     <CodesignKey>iPhone Developer</CodesignKey>
   </PropertyGroup>
@@ -125,89 +125,15 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.Maui.Controls" Version="8.0.3" />
     <PackageReference Include="CommunityToolkit.Maui" Version="3.1.0" />
     <PackageReference Include="CommunityToolkit.Maui.MediaElement" Version="1.0.2" />
     <PackageReference Include="CommunityToolkit.Mvvm" Version="8.1.0-preview2" />
     <PackageReference Include="epj.Expander.Maui" Version="1.0.2" />
+    <PackageReference Include="epj.RouteGenerator" Version="1.0.0-pre1" />
     <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="6.0.0" />
     <PackageReference Include="Mopups" Version="1.1.0" />
     <PackageReference Include="PureWeen.Maui.FixesAndWorkarounds" Version="1.4.9" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Compile Update="Views\Accordion\AccordionMvvmPage.xaml.cs">
-      <DependentUpon>AccordionMvvmPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Update="Views\AddressPage.xaml.cs">
-      <DependentUpon>AddressPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Update="Views\GraphicsPage.xaml.cs">
-      <DependentUpon>GraphicsPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Update="Views\MultiBindingPage.xaml.cs">
-      <DependentUpon>MultiBindingPage.xaml</DependentUpon>
-    </Compile>
-  </ItemGroup>
-
-  <ItemGroup>
-    <MauiXaml Update="Views\Accordion\AccordionOnePage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </MauiXaml>
-    <MauiXaml Update="Views\Accordion\AccordionMvvmPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </MauiXaml>
-    <MauiXaml Update="Views\BindingsPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </MauiXaml>
-    <MauiXaml Update="Views\Custom\CustomLabel.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </MauiXaml>
-    <MauiXaml Update="Views\EventsPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </MauiXaml>
-    <MauiXaml Update="Views\MultiBindingPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </MauiXaml>
-    <MauiXaml Update="Views\GraphicsPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </MauiXaml>
-    <MauiXaml Update="Views\PassObjectsPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </MauiXaml>
-    <MauiXaml Update="Views\Platform\Android\HelloFromAndroid.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </MauiXaml>
-    <MauiXaml Update="Views\Platform\Android\ImageViewAndroid.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </MauiXaml>
-    <MauiXaml Update="Views\Platform\iOS\HelloFromiOS.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </MauiXaml>
-    <MauiXaml Update="Views\Platform\iOS\ImageViewiOS.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </MauiXaml>
-    <MauiXaml Update="Views\Platform\Other\HelloFromOther.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </MauiXaml>
-    <MauiXaml Update="Views\Platform\PageWithPlatformSpecificView.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </MauiXaml>
-    <MauiXaml Update="Views\Platform\Android\ViewAndroid.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </MauiXaml>
-    <MauiXaml Update="Views\Platform\iOS\ViewiOS.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </MauiXaml>
-    <MauiXaml Update="Views\Popups\AddressPopup.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </MauiXaml>
-    <MauiXaml Update="Views\VideoPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </MauiXaml>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Services\Audio\" />
   </ItemGroup>
 
 </Project>

@@ -1,5 +1,6 @@
 ﻿using CommunityToolkit.Maui;
 using epj.Expander.Maui;
+using epj.RouteGenerator;
 using Maui.FixesAndWorkarounds;
 using MauiSamples.Services;
 using MauiSamples.Services.Audio;
@@ -12,6 +13,7 @@ using Mopups.Hosting;
 
 namespace MauiSamples;
 
+[AutoRoutes("Page")]
 public static class MauiProgram
 {
     public static MauiApp CreateMauiApp()

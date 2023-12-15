@@ -9,9 +9,14 @@ public partial class AppShell : Shell
     {
         InitializeComponent();
 
-        Routing.RegisterRoute(nameof(MultiBindingPage), typeof(MultiBindingPage));
-        Routing.RegisterRoute(nameof(PassObjectsPage), typeof(PassObjectsPage));
-        Routing.RegisterRoute(nameof(AccordionOnePage), typeof(AccordionOnePage));
-        Routing.RegisterRoute(nameof(AccordionMvvmPage), typeof(AccordionMvvmPage));
+        //Routing.RegisterRoute(nameof(MultiBindingPage), typeof(MultiBindingPage));
+        //Routing.RegisterRoute(nameof(PassObjectsPage), typeof(PassObjectsPage));
+        //Routing.RegisterRoute(nameof(AccordionOnePage), typeof(AccordionOnePage));
+        //Routing.RegisterRoute(nameof(AccordionMvvmPage), typeof(AccordionMvvmPage));
+
+        Routing.RegisterRoute(Routes.MultiBindingPage, typeof(MultiBindingPage));
+        Routing.RegisterRoute(Routes.PassObjectsPage, typeof(PassObjectsPage));
+        Routing.RegisterRoute(Routes.AccordionOnePage, typeof(AccordionOnePage));
+        Routing.RegisterRoute(Routes.AccordionMvvmPage, typeof(AccordionMvvmPage));
     }
 }
