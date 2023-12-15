@@ -1,14 +1,18 @@
 ﻿using MauiSamples.Models;
+using MauiSamples.Navigation;
 using MauiSamples.ViewModels;
-using MauiSamples.Views.Accordion;
 using MauiSamples.Views.Platform;
 
 namespace MauiSamples.Views;
 
 public partial class MainPage
 {
-    public MainPage(MainViewModel viewModel)
+    private readonly INavigationService _navigationService;
+
+    public MainPage(MainViewModel viewModel, INavigationService navigationService)
     {
+        _navigationService = navigationService;
+
         InitializeComponent();
         BindingContext = viewModel;
     }
@@ -58,12 +62,12 @@ public partial class MainPage
 
     private async void OnMultiBindingPageButtonClicked(object sender, EventArgs e)
     {
-        await Shell.Current.GoToAsync(nameof(MultiBindingPage));
+        await _navigationService.GoToAsync(Routes.MultiBindingPage);
     }
 
     private async void OnPassPersonButtonClicked(object sender, EventArgs e)
     {
-        await Shell.Current.GoToAsync($"{nameof(PassObjectsPage)}?Name={"John"}&Age={59}&IsMarried={true}", parameters: new Dictionary<string, object>
+        await _navigationService.GoToAsync($"{Routes.PassObjectsPage}?Name={"John"}&Age={59}&IsMarried={true}", parameters: new Dictionary<string, object>
         {
             {
                 "Somebody",
@@ -80,11 +84,11 @@ public partial class MainPage
 
     private async void OnAccordionOneButtonPressed(object sender, EventArgs e)
     {
-        await Shell.Current.GoToAsync(nameof(AccordionOnePage));
+        await _navigationService.GoToAsync(Routes.AccordionOnePage);
     }
 
     private async void OnAccordionTwoButtonPressed(object sender, EventArgs e)
     {
-        await Shell.Current.GoToAsync(nameof(AccordionMvvmPage));
+        await _navigationService.GoToAsync(Routes.AccordionMvvmPage);
     }
 }

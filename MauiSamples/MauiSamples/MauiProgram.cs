@@ -2,6 +2,7 @@
 using epj.Expander.Maui;
 using epj.RouteGenerator;
 using Maui.FixesAndWorkarounds;
+using MauiSamples.Navigation;
 using MauiSamples.Services;
 using MauiSamples.Services.Audio;
 using MauiSamples.Services.Device;
@@ -38,6 +39,7 @@ public static class MauiProgram
         builder.Logging.AddDebug();
 #endif
 
+        builder.Services.AddSingleton<INavigationService, NavigationService>();
         builder.Services.AddSingleton<IDeviceService>(DeviceService.Instance);
         builder.Services.AddSingleton<IAudioService, AudioService>();
         builder.Services.AddSingleton<MainViewModel>();
