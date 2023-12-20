@@ -28,6 +28,7 @@ This is a sample repository to demonstrate and experiment with various C# .NET a
 - [ ] App Preferences
 - [ ] Background Services
 - [ ] Media Playback (Audio, Video)
+- [ ] Recording Media
 - [ ] ...
 
 This list is not final and will be extended and updated frequently.
