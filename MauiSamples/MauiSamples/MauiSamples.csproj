@@ -132,7 +132,7 @@
     <PackageReference Include="CommunityToolkit.Maui.MediaElement" Version="3.0.1" />
     <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.2" />
     <PackageReference Include="epj.Expander.Maui" Version="1.0.2" />
-    <PackageReference Include="epj.RouteGenerator" Version="1.0.0" />
+    <PackageReference Include="epj.RouteGenerator" Version="1.0.1-alpha2" />
     <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.0" />
     <PackageReference Include="Mopups" Version="1.3.0" />
     <PackageReference Include="PureWeen.Maui.FixesAndWorkarounds" Version="1.5.0" />
