@@ -6,9 +6,11 @@
     <Nullable>enable</Nullable>
 
     <IsPackable>false</IsPackable>
+
+    <Configurations>Debug;Release;Debug Android;Debug iOS;</Configurations>
   </PropertyGroup>
 
-  <ItemGroup>
+  <ItemGroup Condition="'$(Configuration)'=='Debug' OR '$(Configuration)'=='Release'">
     <PackageReference Include="Microsoft.Maui.Dependencies" Version="6.0.547" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.3.2" />
     <PackageReference Include="Moq" Version="4.18.2" />
@@ -18,7 +20,7 @@
     <PackageReference Include="coverlet.collector" Version="3.1.2" />
   </ItemGroup>
 
-  <ItemGroup>
+  <ItemGroup Condition="'$(Configuration)'=='Debug' OR '$(Configuration)'=='Release'">
     <ProjectReference Include="..\MauiSamples\MauiSamples.csproj" />
   </ItemGroup>
 
