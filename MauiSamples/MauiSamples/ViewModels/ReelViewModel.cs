@@ -7,7 +7,7 @@ namespace MauiSamples.ViewModels;
 public partial class ReelViewModel : ObservableObject
 {
     private const string FrogVideo = "https://github.com/ewerspej/maui-samples/blob/main/assets/frog.mp4?raw=true";
-    private const string LakeVideo = "https://github.com/ewerspej/maui-samples/blog/main/assets/lake.mp4?raw=true";
+    private const string LakeVideo = "https://github.com/ewerspej/maui-samples/blob/main/assets/lake.mp4?raw=true";
 
     [ObservableProperty]
     private ObservableCollection<VideoModel> _videos;

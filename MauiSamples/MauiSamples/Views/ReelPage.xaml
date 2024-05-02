@@ -5,6 +5,7 @@
   xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
   xmlns:models="clr-namespace:MauiSamples.Models"
   xmlns:viewModels="clr-namespace:MauiSamples.ViewModels"
+  xmlns:media="clr-namespace:MauiSamples.CustomControls.Media"
   x:Name="Reels"
   x:DataType="viewModels:ReelViewModel"
   Shell.NavBarIsVisible="False">
@@ -14,13 +15,14 @@
       HeightRequest="{Binding Height, Source={x:Reference Reels}}"
       HorizontalOptions="Fill"
       VerticalOptions="Center"
-      ItemsSource="{Binding Videos}">
+      ItemsSource="{Binding Videos}"
+      Scrolled="ItemsView_OnScrolled">
 
       <CollectionView.ItemsLayout>
         <LinearItemsLayout
           Orientation="Vertical"
           SnapPointsType="MandatorySingle"
-          SnapPointsAlignment="Start" />
+          SnapPointsAlignment="Center" />
       </CollectionView.ItemsLayout>
 
       <CollectionView.ItemTemplate>
@@ -28,6 +30,15 @@
           <Grid
             HeightRequest="{Binding Height, Source={x:Reference Reels}}"
             HorizontalOptions="Fill">
+
+            <media:ExtendedMediaElement
+              Aspect="Fill"
+              Source="{Binding VideoUri}"
+              ShouldAutoPlay="False"
+              ShouldLoopPlayback="True"
+              ShouldShowPlaybackControls="False"
+              IsPlaying="{Binding IsPlaying}" />
+
             <Label
               Text="{Binding Title}"
               VerticalOptions="Center"
