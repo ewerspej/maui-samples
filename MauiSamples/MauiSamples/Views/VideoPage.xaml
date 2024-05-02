@@ -78,7 +78,7 @@
       Margin="0"
       x:Name="VideoPlayer"
       HorizontalOptions="Fill"
-      Source="https://github.com/ewerspej/maui-samples/blob/main/assets/frog113403.mp4?raw=true"
+      Source="https://github.com/ewerspej/maui-samples/blob/main/assets/frog.mp4?raw=true"
       ShouldLoopPlayback="True"
       ShouldShowPlaybackControls="False"
       ShouldKeepScreenOn="True"
