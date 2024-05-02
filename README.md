@@ -49,4 +49,5 @@ Whatever you decide, thank you for being here and reading this ❤️
 ## Acknowledgements
 
 Frog Video by <a href="https://pixabay.com/users/meditation_hypnosis-25780195/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=video&amp;utm_content=113403">Ivan</a> from <a href="https://pixabay.com//?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=video&amp;utm_content=113403">Pixabay</a>
+<br/>
 Lake Video from <a href="https://allsamplefiles.com/videos/mp4">All Sample Files</a>
