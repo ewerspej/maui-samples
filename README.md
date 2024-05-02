@@ -17,6 +17,7 @@ This is a sample repository to demonstrate and experiment with various C# .NET a
 - [x] Custom TitleView: [Blog Post](https://blog.ewers-peters.de/customize-the-title-bar-of-a-maui-app-with-these-simple-steps)
 - [x] Dependency Injection using Shell: [Blog Post](https://blog.ewers-peters.de/are-you-using-dependency-injection-in-your-net-maui-app-yet)
 - [x] Expander & Accordion: [Blog Post](https://blog.ewers-peters.de/three-ways-to-implement-an-accordion-control)
+- [x] Video Reel
 - [ ] Foreground Services
 - [ ] File Download
 - [ ] App Directories
@@ -48,3 +49,4 @@ Whatever you decide, thank you for being here and reading this ❤️
 ## Acknowledgements
 
 Frog Video by <a href="https://pixabay.com/users/meditation_hypnosis-25780195/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=video&amp;utm_content=113403">Ivan</a> from <a href="https://pixabay.com//?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=video&amp;utm_content=113403">Pixabay</a>
+Lake Video from <a href="https://allsamplefiles.com/videos/mp4">All Sample Files</a>
