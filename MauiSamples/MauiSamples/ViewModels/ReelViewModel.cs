@@ -7,7 +7,7 @@ namespace MauiSamples.ViewModels;
 public partial class ReelViewModel : ObservableObject
 {
     private const string FrogVideo = "https://github.com/ewerspej/maui-samples/blob/main/assets/frog.mp4?raw=true";
-    private const string LakeVideo = "https://github.com/ewerspej/maui-samples/blob/main/assets/lake.mp4?raw=true";
+    private const string BuckVideo = "https://github.com/ewerspej/maui-samples/blob/main/assets/bigbuckbunny.mp4?raw=true";
 
     [ObservableProperty]
     private ObservableCollection<VideoModel> _videos;
@@ -17,11 +17,11 @@ public partial class ReelViewModel : ObservableObject
         Videos =
         [
             new VideoModel("First", FrogVideo),
-            new VideoModel("Second", LakeVideo),
+            new VideoModel("Second", BuckVideo),
             new VideoModel("Third", FrogVideo),
-            new VideoModel("Fourth", LakeVideo),
+            new VideoModel("Fourth", BuckVideo),
             new VideoModel("Fifth", FrogVideo),
-            new VideoModel("Sixth", LakeVideo)
+            new VideoModel("Sixth", BuckVideo)
         ];
     }
 }
