@@ -138,4 +138,16 @@
     <PackageReference Include="PureWeen.Maui.FixesAndWorkarounds" Version="1.5.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Compile Update="Views\ReelPage.xaml.cs">
+      <DependentUpon>ReelPage.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <MauiXaml Update="Views\ReelPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </MauiXaml>
+  </ItemGroup>
+
 </Project>
