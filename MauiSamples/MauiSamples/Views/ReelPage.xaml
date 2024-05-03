@@ -11,6 +11,7 @@
   Shell.NavBarIsVisible="False">
 
   <Grid>
+
     <CollectionView
       HeightRequest="{Binding Height, Source={x:Reference Reels}}"
       HorizontalOptions="Fill"
@@ -32,7 +33,7 @@
             HorizontalOptions="Fill">
 
             <media:ExtendedMediaElement
-              Aspect="Fill"
+              Aspect="AspectFill"
               Source="{Binding VideoUri}"
               ShouldAutoPlay="False"
               ShouldLoopPlayback="True"
@@ -44,6 +45,7 @@
               VerticalOptions="Center"
               HorizontalOptions="Center"
               FontSize="Title" />
+
           </Grid>
         </DataTemplate>
       </CollectionView.ItemTemplate>
