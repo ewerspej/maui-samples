@@ -30,6 +30,7 @@
         <DataTemplate x:DataType="models:VideoModel">
           <Grid
             HeightRequest="{Binding Height, Source={x:Reference Reels}}"
+            BackgroundColor="{Binding BackgroundColor}"
             HorizontalOptions="Fill">
 
             <media:ExtendedMediaElement

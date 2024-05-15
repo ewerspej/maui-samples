@@ -16,12 +16,12 @@ public partial class ReelViewModel : ObservableObject
     {
         Videos =
         [
-            new VideoModel("First", FrogVideo),
-            new VideoModel("Second", BuckVideo),
-            new VideoModel("Third", FrogVideo),
-            new VideoModel("Fourth", BuckVideo),
-            new VideoModel("Fifth", FrogVideo),
-            new VideoModel("Sixth", BuckVideo)
+            new VideoModel("First", FrogVideo, Colors.Aqua),
+            new VideoModel("Second", BuckVideo, Colors.Red),
+            new VideoModel("Third", FrogVideo, Colors.GreenYellow),
+            new VideoModel("Fourth", BuckVideo, Colors.DarkSlateGray),
+            new VideoModel("Fifth", FrogVideo, Colors.DeepSkyBlue),
+            new VideoModel("Sixth", BuckVideo, Colors.Orange)
         ];
     }
 }
