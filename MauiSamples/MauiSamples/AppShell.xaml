@@ -37,6 +37,12 @@
         ContentTemplate="{DataTemplate views:EventsPage}"
         Route="Event" />
     </Tab>
+    <Tab Title="Reel">
+      <ShellContent 
+        Title="Reel"
+        ContentTemplate="{DataTemplate views:ReelPage}"
+        Route="Reel" />
+    </Tab>
   </TabBar>
 
 </Shell>

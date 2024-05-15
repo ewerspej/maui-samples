@@ -46,6 +46,8 @@ public static class MauiProgram
         builder.Services.AddSingleton<MainPage>();
         builder.Services.AddTransient<BindingsViewModel>();
         builder.Services.AddTransient<BindingsPage>();
+        builder.Services.AddTransient<ReelViewModel>();
+        builder.Services.AddTransient<ReelPage>();
 
         var app = builder.Build();
 
