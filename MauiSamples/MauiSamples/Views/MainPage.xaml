@@ -101,6 +101,8 @@
         TextColor="Orange"
         Text="This is a CustomLabel that overrides the Color value" />
 
+      <Button Text="To Page with BasePage" Clicked="Button_OnClicked"></Button>
+
       <maui:Expander Animated="True">
         <maui:Expander.HeaderContent>
           <Grid

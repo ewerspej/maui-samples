@@ -91,4 +91,9 @@ public partial class MainPage
     {
         await _navigationService.GoToAsync(Routes.AccordionMvvmPage);
     }
+
+    private async void Button_OnClicked(object sender, EventArgs e)
+    {
+        await _navigationService.GoToAsync(Routes.PageWithBase);
+    }
 }

@@ -15,6 +15,7 @@ using Mopups.Hosting;
 namespace MauiSamples;
 
 [AutoRoutes("Page")]
+[ExtraRoute(nameof(PageWithBase))]
 public static class MauiProgram
 {
     public static MauiApp CreateMauiApp()

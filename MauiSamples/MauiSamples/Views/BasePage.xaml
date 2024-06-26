@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+  x:Class="MauiSamples.Views.BasePage"
+  xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+  <ContentPage.ControlTemplate>
+    <ControlTemplate>
+      <Grid RowDefinitions="250,*,250">
+        <Label
+          Grid.Row="0"
+          FontSize="Title"
+          HorizontalOptions="Center"
+          Text="Header"
+          VerticalOptions="Center" />
+        <ContentPresenter Grid.Row="1" />
+        <Label
+          Grid.Row="2"
+          FontSize="Title"
+          HorizontalOptions="Center"
+          Text="Footer"
+          VerticalOptions="Center" />
+      </Grid>
+    </ControlTemplate>
+  </ContentPage.ControlTemplate>
+
+</ContentPage>
