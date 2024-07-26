@@ -18,7 +18,7 @@ public partial class MainViewModel : ObservableObject
         _deviceService = deviceService;
         _navigationService = navigationService;
 
-        // we can also pull in the a service via the static ServiceHelper class, but that's not recommended as it makes dependencies opaque and fosters the Service Locator anti-pattern
+        // we can also pull in a service via the static ServiceHelper class, but that's not recommended as it makes dependencies opaque and fosters the Service Locator anti-pattern
         //_audioService = ServiceHelper.GetService<IAudioService>();
     }
 

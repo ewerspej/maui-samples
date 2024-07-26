@@ -26,4 +26,14 @@ public partial class ReelPage : ContentPage
             }
         }
     }
+
+    protected override void OnDisappearing()
+    {
+        base.OnDisappearing();
+
+        foreach (var video in _vm.Videos)
+        {
+            video.IsPlaying = false;
+        }
+    }
 }
