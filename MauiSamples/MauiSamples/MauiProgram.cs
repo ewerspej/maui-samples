@@ -1,7 +1,6 @@
 ﻿using CommunityToolkit.Maui;
 using epj.Expander.Maui;
 using epj.RouteGenerator;
-using Maui.FixesAndWorkarounds;
 using MauiSamples.Navigation;
 using MauiSamples.Services;
 using MauiSamples.Services.Audio;
@@ -26,7 +25,6 @@ public static class MauiProgram
             .UseMauiCommunityToolkit()
             .UseMauiCommunityToolkitMediaElement()
             .ConfigureMopups()
-            .ConfigureMauiWorkarounds()
             .ConfigureFonts(fonts =>
             {
                 fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
