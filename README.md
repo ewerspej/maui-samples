@@ -38,6 +38,10 @@ This list is not final and will be extended and updated frequently.
 
 I'm happy to cover any interesting and challenging topic. Just let me know about your ideas and wishes and might pick it up in my blog and in this repository.
 
+## Other Topics covered in my Blog ##
+
+- [White labeling MAUI apps](https://blog.ewers-peters.de/white-labeling-net-maui-apps)
+
 ## Sponsorship ##
 
 You can support me by sharing my blog and this repository, and you can sponsor me or buy me a coffee.
