@@ -7,38 +7,68 @@
   Shell.FlyoutBehavior="Disabled">
 
   <TabBar>
-    <Tab Title="Home">
+    <Tab
+      Title="Home"
+      Icon="{FontImage FontFamily='MaterialIcons-Regular',
+                       Color='DarkSlateGray',
+                       Glyph='&#xe88a;',
+                       Size='24'}">
       <ShellContent
         Title="Home"
         ContentTemplate="{DataTemplate views:MainPage}"
         Route="MainPage" />
     </Tab>
-    <Tab Title="Address">
+    <Tab
+      Title="Address"
+      Icon="{FontImage FontFamily='MaterialIcons-Regular',
+                       Color='DarkSlateGray',
+                       Glyph='&#xe0c8;',
+                       Size='24'}">
       <ShellContent
         Title="MVVM Goodness"
         ContentTemplate="{DataTemplate views:AddressPage}"
         Route="MvvmSample" />
     </Tab>
-    <Tab Title="Bindings">
+    <Tab
+      Title="Bindings"
+      Icon="{FontImage FontFamily='MaterialIcons-Regular',
+                       Color='DarkSlateGray',
+                       Glyph='&#xe178;',
+                       Size='24'}">
       <ShellContent
         Title="Bindings"
         ContentTemplate="{DataTemplate views:BindingsPage}"
         Route="Bindings" />
     </Tab>
-    <Tab Title="Video">
+    <Tab
+      Title="Video"
+      Icon="{FontImage FontFamily='MaterialIcons-Regular',
+                       Color='DarkSlateGray',
+                       Glyph='&#xe63a;',
+                       Size='24'}">
       <ShellContent
         Title="Video"
         ContentTemplate="{DataTemplate views:VideoPage}"
         Route="Video" />
     </Tab>
-    <Tab Title="Events">
+    <Tab
+      Title="Events"
+      Icon="{FontImage FontFamily='MaterialIcons-Regular',
+                       Color='DarkSlateGray',
+                       Glyph='&#xe3a0;',
+                       Size='24'}">
       <ShellContent
         Title="Events"
         ContentTemplate="{DataTemplate views:EventsPage}"
         Route="Event" />
     </Tab>
-    <Tab Title="Reel">
-      <ShellContent 
+    <Tab
+      Title="Reel"
+      Icon="{FontImage FontFamily='MaterialIcons-Regular',
+                       Color='DarkSlateGray',
+                       Glyph='&#xe3b3;',
+                       Size='24'}">
+      <ShellContent
         Title="Reel"
         ContentTemplate="{DataTemplate views:ReelPage}"
         Route="Reel" />
