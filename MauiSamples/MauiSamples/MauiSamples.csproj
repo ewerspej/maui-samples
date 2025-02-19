@@ -1,11 +1,11 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>net8.0;net8.0-android;net8.0-ios;net8.0-maccatalyst</TargetFrameworks>
-    <TargetFrameworks Condition="$([MSBuild]::IsOSPlatform('windows'))">$(TargetFrameworks);net8.0-windows10.0.19041.0</TargetFrameworks>
+    <TargetFrameworks>net9.0;net9.0-android;net9.0-ios;net9.0-maccatalyst</TargetFrameworks>
+    <TargetFrameworks Condition="$([MSBuild]::IsOSPlatform('windows'))">$(TargetFrameworks);net9.0-windows10.0.19041.0</TargetFrameworks>
     <!-- Uncomment to also build the tizen app. You will need to install tizen by following this: https://github.com/Samsung/Tizen.NET -->
-    <!-- <TargetFrameworks>$(TargetFrameworks);net8.0-tizen</TargetFrameworks> -->
-    <OutputType Condition="'$(TargetFramework)' != 'net8.0'">Exe</OutputType>
+    <!-- <TargetFrameworks>$(TargetFrameworks);net9.0-tizen</TargetFrameworks> -->
+    <OutputType Condition="'$(TargetFramework)' != 'net9.0'">Exe</OutputType>
     <RootNamespace>MauiSamples</RootNamespace>
     <UseMaui>true</UseMaui>
     <SingleProject>true</SingleProject>
@@ -31,17 +31,17 @@
     <SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'tizen'">6.5</SupportedOSPlatformVersion>
   </PropertyGroup>
 
-  <PropertyGroup Condition="'$(TargetFramework)'=='net8.0-ios'">
+  <PropertyGroup Condition="'$(TargetFramework)'=='net9.0-ios'">
     <ProvisioningType>automatic</ProvisioningType>
     <CodesignKey>Apple Development: Created via API (KX66P46Y9R)</CodesignKey>
     <CodesignProvision>VS: WildCard Development</CodesignProvision>
   </PropertyGroup>
 
-  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net8.0-ios|AnyCPU'">
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net9.0-ios|AnyCPU'">
     <MtouchLink>None</MtouchLink>
   </PropertyGroup>
 
-  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net8.0-ios|AnyCPU'">
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net9.0-ios|AnyCPU'">
     <MtouchLink>None</MtouchLink>
   </PropertyGroup>
 
@@ -127,15 +127,15 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.Maui.Controls" Version="8.0.82" />
-    <PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="8.0.82" />
-    <PackageReference Include="CommunityToolkit.Maui" Version="9.0.3" />
-    <PackageReference Include="CommunityToolkit.Maui.MediaElement" Version="4.1.1" />
-    <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.2" />
+    <PackageReference Include="Microsoft.Maui.Controls" Version="9.0.40" />
+    <PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="9.0.40" />
+    <PackageReference Include="CommunityToolkit.Maui" Version="10.0.0" />
+    <PackageReference Include="CommunityToolkit.Maui.MediaElement" Version="6.0.1" />
+    <PackageReference Include="CommunityToolkit.Mvvm" Version="8.4.0" />
     <PackageReference Include="epj.Expander.Maui" Version="1.0.3" />
-    <PackageReference Include="epj.RouteGenerator" Version="1.0.2" />
-    <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.0" />
-    <PackageReference Include="Mopups" Version="1.3.0" />
+    <PackageReference Include="epj.RouteGenerator" Version="1.0.4" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="9.0.2" />
+    <PackageReference Include="Mopups" Version="1.3.2" />
   </ItemGroup>
 
   <ItemGroup>
