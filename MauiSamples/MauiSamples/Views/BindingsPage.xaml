@@ -3,61 +3,79 @@
   x:Class="MauiSamples.Views.BindingsPage"
   xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
   xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+  xmlns:converters="clr-namespace:MauiSamples.Converters"
   xmlns:models="clr-namespace:MauiSamples.Models"
   xmlns:viewModels="clr-namespace:MauiSamples.ViewModels"
   x:DataType="viewModels:BindingsViewModel"
   Shell.NavBarIsVisible="False">
 
+  <ContentPage.Resources>
+    <converters:FuncValueToBoolConverter x:Key="FuncValueToBoolConverter" />
+  </ContentPage.Resources>
+
   <Grid
     RowDefinitions="*, auto"
     RowSpacing="8">
 
-    <ListView
+    <CollectionView
       Grid.Row="0"
       ItemsSource="{Binding Items}">
-      <ListView.ItemTemplate>
-        <!-- redefining the DataType here -->
+      <CollectionView.ItemTemplate>
+        <!--  redefining the DataType here  -->
         <DataTemplate x:DataType="models:BindingItem">
-          <ViewCell>
-            <Grid
-              Padding="8"
-              ColumnDefinitions="*,*">
-              <Label
-                Grid.Column="0"
-                HorizontalOptions="Start"
-                Text="{Binding Name}"
-                VerticalTextAlignment="Center" />
-              <Button
-                Grid.Column="1"
-                HorizontalOptions="End"
-                VerticalOptions="Center"
-                Text="Remove"
-                WidthRequest="100"
-                HeightRequest="40"
-                BackgroundColor="Red"
-                Command="{Binding RemoveItemCommand, Source={RelativeSource AncestorType={x:Type viewModels:BindingsViewModel}}}"
-                CommandParameter="{Binding .}" />
-            </Grid>
-          </ViewCell>
+          <Grid
+            Padding="8"
+            ColumnDefinitions="*,*">
+            <Label
+              Grid.Column="0"
+              HorizontalOptions="Start"
+              Text="{Binding Name}"
+              VerticalTextAlignment="Center" />
+            <Button
+              Grid.Column="1"
+              BackgroundColor="Red"
+              Command="{Binding RemoveItemCommand, Source={RelativeSource AncestorType={x:Type viewModels:BindingsViewModel}}}"
+              CommandParameter="{Binding .}"
+              HeightRequest="40"
+              HorizontalOptions="End"
+              Text="Remove"
+              VerticalOptions="Center"
+              WidthRequest="100" />
+            <Grid.Triggers>
+              <DataTrigger TargetType="Grid" Value="True">
+                <DataTrigger.Binding>
+                  <MultiBinding Converter="{StaticResource FuncValueToBoolConverter}">
+                    <Binding
+                      Path="IsPrimeFunc"
+                      Source="{RelativeSource AncestorType={x:Type viewModels:BindingsViewModel}}" />
+                    <Binding Path="Count" />
+                  </MultiBinding>
+                </DataTrigger.Binding>
+                <DataTrigger.Setters>
+                  <Setter Property="BackgroundColor" Value="LightGreen" />
+                </DataTrigger.Setters>
+              </DataTrigger>
+            </Grid.Triggers>
+          </Grid>
         </DataTemplate>
-      </ListView.ItemTemplate>
-    </ListView>
+      </CollectionView.ItemTemplate>
+    </CollectionView>
 
     <HorizontalStackLayout
       Grid.Row="1"
-      Spacing="10"
-      HorizontalOptions="Center">
+      HorizontalOptions="Center"
+      Spacing="10">
       <Button
         Command="{Binding AddItemCommand}"
         HorizontalOptions="Center"
-        VerticalOptions="End"
         Text="Add Item"
+        VerticalOptions="End"
         WidthRequest="150" />
       <Button
         Command="{Binding RemoveItemCommand}"
         HorizontalOptions="Center"
-        VerticalOptions="End"
         Text="Remove Last"
+        VerticalOptions="End"
         WidthRequest="150" />
     </HorizontalStackLayout>
 

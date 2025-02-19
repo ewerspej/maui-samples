@@ -7,6 +7,8 @@ namespace MauiSamples.ViewModels;
 
 public partial class BindingsViewModel : ObservableObject
 {
+    public Func<object, bool> IsPrimeFunc => IsPrime;
+
     [ObservableProperty]
     private ObservableCollection<BindingItem> _items = [];
 
@@ -39,5 +41,23 @@ public partial class BindingsViewModel : ObservableObject
         }
 
         Items.Remove(item);
+    }
+
+    private static bool IsPrime(object number)
+    {
+        if (number is not int intNumber || intNumber < 2)
+        {
+            return false;
+        }
+
+        for (var i = 2; i <= Math.Sqrt(intNumber); i++)
+        {
+            if (intNumber % i == 0)
+            {
+                return false;
+            }
+        }
+
+        return true;
     }
 }
