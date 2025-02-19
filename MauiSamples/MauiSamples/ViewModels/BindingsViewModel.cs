@@ -8,7 +8,7 @@ namespace MauiSamples.ViewModels;
 public partial class BindingsViewModel : ObservableObject
 {
     [ObservableProperty]
-    private ObservableCollection<BindingItem> _items = new();
+    private ObservableCollection<BindingItem> _items = [];
 
     private int _counter = 0;
 
@@ -25,14 +25,14 @@ public partial class BindingsViewModel : ObservableObject
     }
 
     [RelayCommand]
-    private void RemoveItem(BindingItem item = null)
+    private void RemoveItem(BindingItem? item = null)
     {
         if (Items.Count == 0)
         {
             return;
         }
 
-        if (item == null)
+        if (item is null)
         {
             Items.Remove(Items.Last());
             return;
