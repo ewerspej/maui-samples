@@ -11,27 +11,25 @@ public partial class AddressViewModelSourceGen : ObservableObject
 
     [ObservableProperty]
     [NotifyPropertyChangedFor(nameof(FullAddress))]
-    private string _firstName;
+    public partial string? FirstName { get; set; }
 
     [ObservableProperty]
     [NotifyPropertyChangedFor(nameof(FullAddress))]
-    private string _lastName;
+    public partial string? LastName { get; set; }
+    [ObservableProperty]
+    [NotifyPropertyChangedFor(nameof(FullAddress))]
+    public partial string? StreetAddress { get; set; }
 
     [ObservableProperty]
     [NotifyPropertyChangedFor(nameof(FullAddress))]
-    private string _streetAddress;
-
+    public partial string? PostCode { get; set; }
     [ObservableProperty]
     [NotifyPropertyChangedFor(nameof(FullAddress))]
-    private string _postCode;
-
-    [ObservableProperty]
-    [NotifyPropertyChangedFor(nameof(FullAddress))]
-    private string _city;
+    public partial string? City { get; set; }
 
     [ObservableProperty]
     [NotifyCanExecuteChangedFor(nameof(PrintAddressCommand))]
-    private int _copies;
+    public partial int Copies { get; set; }
 
     partial void OnCopiesChanging(int value)
     {
